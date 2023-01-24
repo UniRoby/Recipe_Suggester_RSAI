@@ -15,7 +15,7 @@ public class SimpleDemoGA {
     Individual secondFittest;
     int generationCount = 0;
 
-
+//commento
     public static void main(String[] args) {
 
         RecipeReader reader= new RecipeReader("src\\recipes.csv");
