@@ -7,7 +7,7 @@ import static org.apache.commons.lang3.BooleanUtils.or;
  * @author Roberto
  */
 
-//Main class
+//Main class modifica2
 public class SimpleDemoGA {
 
     Population population = new Population();
