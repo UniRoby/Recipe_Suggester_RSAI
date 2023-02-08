@@ -210,19 +210,24 @@ def get_recs(ingredients, N=5, mean=False):
 def start_search(n,input_ingredients):
         
         df = pd.read_csv('ricette6k.csv',encoding='iso-8859-1')
-        result=""
+        #result=""
         
         if input_ingredients !="":
             ingredients=input_ingredients
-            result+="\n---Ingredienti inseriti in Input: "+ingredients
+            #result+="\n---Ingredienti inseriti in Input: "+ingredients
+            result_text.insert(tk.END, "\n---Ingredienti inseriti in Input: "+ingredients)
+
         elif n>=0:
             print(" \n avvio ricerca ricette....")
-            print(" \n ing: "+df['ingredients'][n])
+
             ingredients=df['ingredients'][n]
-            result+="\n-----Consigli per la ricetta: "+df['title'][n]
-            result+="\n---ingredienti ricetta: "+ingredients
+            #result+="\n-----Consigli per la ricetta: "+df['title'][n]
+            #result+="\n---ingredienti ricetta: "+ingredients
+            result_text.insert(tk.END,"\n-----Consigli per la ricetta: "+df['title'][n])
+            result_text.insert(tk.END, "\n---ingredienti ricetta: "+ingredients)
+
             
-        result+="\n"
+        #result+="\n"
        
         recs = get_recs(ingredients)
             
@@ -231,10 +236,11 @@ def start_search(n,input_ingredients):
             #print(" \n "+recs.ricetta[i])
             #result_text.insert(tk.END,"\n---"+recs.ricetta[i])
             #result_text.insert(tk.END,recs.ingredienti[i])
-            result+="\n---"+recs.ricetta[i]
+            #result+="\n---"+recs.ricetta[i]
+            result_text.insert(tk.END, "\n---"+recs.ricetta[i])
             i+=1
-        print(result)
-        return result
+        #print(result)
+        #return result
             
 
     
@@ -342,21 +348,24 @@ def show_selected():
     global numbers
     
     selected = []
+    result_text.pack(pady=10,padx=10,fill="both",expand=True,side="top")
+    result_text.configure(state='normal',font=("Arial Black",20))
+    result_text.delete('1.0', tk.END)
+    result_text.insert(tk.END, "\nRISULTATI\n")
     for i in range(len(vars)):
         var = vars[i]
         result=""
         if var.get() == 1:
             selected.append(checkboxes[i].cget("text")+ " indx dataset: "+str(numbers[i]))
             
-            result+=""+start_search(numbers[i],"")
-    print("\nresult  show_selected")
-    print(result)
+            start_search(numbers[i],"")
+    #print("\nresult  show_selected")
+    #print(result)
     buttons_frame.pack_forget()
     
     
 
-    result_text.pack(pady=10,padx=10,fill="both",expand=True,side="top")
-    result_text.configure(state='normal',font=("Arial Black",20))
+
     '''
     result_text.delete('1.0', tk.END)
     result_text.insert(tk.END, "\n----------------------Selected:")
@@ -365,11 +374,10 @@ def show_selected():
     '''
     if input_text.get() !='':
         ingredients = input_text.get()
-        result+=""+start_search(-1,ingredients)
+        start_search(-1,ingredients)
         
-    result_text.delete('1.0', tk.END)
-    result_text.insert(tk.END, "\nRISULTATI\n")
-    result_text.insert(tk.END , result)
+
+
     result_text.insert(tk.END, "\n")   
         #result_text.insert(tk.END, "Ingredienti inseriti: "+ ingredients)
         
