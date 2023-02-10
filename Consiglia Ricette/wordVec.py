@@ -18,7 +18,7 @@ def get_mean(corpus):
 
 if __name__ == "__main__":
     # load in data
-    df = pd.read_csv('ricette6k.csv',encoding='iso-8859-1')
+    df = pd.read_csv('ricette.csv',encoding='iso-8859-1')
 
     df.dropna(subset=['ingredients'], inplace=True)
     # get corpus
@@ -28,13 +28,13 @@ if __name__ == "__main__":
 
     # train and save CBOW Word2Vec model
     model_cbow = Word2Vec(
-      corpus, sg=0, workers=8, window=get_meanw(corpus), min_count=1, vector_size=100
+      corpus, sg=0, workers=8, window=get_mean(corpus), min_count=1, vector_size=100
     )
     print(model_cbow.wv.most_similar(u'pomodori'))
-    '''
+
     model_cbow.save('model_cbow.bin')
     print("Word2Vec model successfully trained")
-    '''
+
 
 '''
 Questo codice utilizza la libreria pandas e gensim per creare un modello 
