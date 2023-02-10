@@ -11,51 +11,23 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from collections import defaultdict
 from random import randrange
+'''
+Sistema di raccomandazione di ricette basato su ingredienti. 
 
-class MeanEmbeddingVectorizer(object):
-    def __init__(self, word_model):
-        self.word_model = word_model
-        self.vector_size = word_model.wv.vector_size
+Il sistema utilizza il modello di Word2Vec per rappresentare gli ingredienti come vettori nel spazio semantico.
+Il codice crea una classe TfidfEmbeddingVectorizer che adatta e trasforma i documenti (liste di ingredienti) 
 
-    def fit(self):  # comply with scikit-learn transformer requirement
-        return self
+in vettori di parole medie. La classe TfidfEmbeddingVectorizer ha il seguente funzionamento:
 
-    def transform(self, docs):  # comply with scikit-learn transformer requirement
-        doc_word_vector = self.word_average_list(docs)
-        return doc_word_vector
+fit: calcola l'IDF (Inverse Document Frequency) di ogni parola utilizzando TfidfVectorizer di scikit-learn.
 
-    def word_average(self, sent):
-        """
-	
-        Calcola il vettore di parole medio per un singolo documento/frase.
-        :param inviato: elenco di token di frase
-        :ritorno:
-                    media: float di vettori di parole di media
-                """
-        mean = []
-        for word in sent:
-            if word in self.word_model.wv.index_to_key:
-                mean.append(self.word_model.wv.get_vector(word))
+transform: trasforma i documenti in vettori di parole medie. Questo viene fatto utilizzando la funzione word_average_list che calcola il vettore di parole medie per più documenti.
 
-        if not mean:  # parole vuote
-            # Se un testo è vuoto, restituisce un vettore di zeri.
-            # logging.warning(
-            # "impossibile calcolare la media a causa dell'assenza del vettore per {}".format(sent)
-            # )
-            return np.zeros(self.vector_size)
-        else:
-            mean = np.array(mean).mean(axis=0)
-            return mean
+word_average: calcola il vettore di parole medie per un singolo documento/frase.
 
-    def word_average_list(self, docs):
-        """
-        Calcola il vettore di parole medio per più documenti, in cui i documenti erano stati tokenizzati.
-        :param docs: elenco di frasi nell'elenco di token separati
-        :ritorno:
-                    array di vettore di parole medio in forma (len(docs),)
-		"""
-        return np.vstack([self.word_average(sent) for sent in docs])
-    
+word_average_list: calcola il vettore di parole medie per più documenti.
+
+'''
 class TfidfEmbeddingVectorizer(object):
     def __init__(self, word_model):
 
@@ -164,86 +136,67 @@ def get_recommendations(N, scores):
     return recommendation
 
 def get_recs(ingredients, N=5, mean=False):
-    # load in word2vec model
+    # carica modelo word2vec
     model = Word2Vec.load("model_cbow.bin")
-   # model.init_sims(replace=True)
+
     #if model:
         #print("Modello caricato correttamente")
-    # load in data
+    # carica in data
     data = pd.read_csv('ricette6k.csv',encoding='iso-8859-1')
     
     # create corpus
     corpus = get_and_sort_corpus(data)
-    
-    if mean:
-        #ottenere incorporamenti medi per ogni documento
-        mean_vec_tr = MeanEmbeddingVectorizer(model)
-        doc_vec = mean_vec_tr.transform(corpus)#corpus è un array
-        doc_vec = [doc.reshape(1, -1) for doc in doc_vec]
-        assert len(doc_vec) == len(corpus)
-    else:
-        # usa TF-IDF come pesi per ogni incorporamento di parole
-        tfidf_vec_tr = TfidfEmbeddingVectorizer(model)
-        tfidf_vec_tr.fit(corpus)
-        doc_vec = tfidf_vec_tr.transform(corpus)
-        doc_vec = [doc.reshape(1, -1) for doc in doc_vec]
-        assert len(doc_vec) == len(corpus)
 
-    # create embessing for input text
+    # usa TF-IDF come pesi per ogni incorporamento di parole
+    tfidf_vec_tr = TfidfEmbeddingVectorizer(model)
+    tfidf_vec_tr.fit(corpus)
+    doc_vec = tfidf_vec_tr.transform(corpus)
+    doc_vec = [doc.reshape(1, -1) for doc in doc_vec]
+    assert len(doc_vec) == len(corpus)
+
+
     input = ingredients
-    # create tokens with elements
+
     input = input.split(",")
 
-    # get embeddings for ingredient doc
-    if mean:
-        input_embedding = mean_vec_tr.transform([input])[0].reshape(1, -1)
-    else:
-        input_embedding = tfidf_vec_tr.transform([input])[0].reshape(1, -1)
+    input_embedding = tfidf_vec_tr.transform([input])[0].reshape(1, -1)
 
-    # get cosine similarity between input embedding and all the document embeddings
+    # ottieni la similarità del coseno tra input embedding e tutti gli embeddings del documento
     cos_sim = map(lambda x: cosine_similarity(input_embedding, x)[0][0], doc_vec)
     scores = list(cos_sim)
-    # Filter top N recommendations
+    # prendi le prime N raccomandazioni
     recommendations = get_recommendations(N, scores)
     return recommendations
 
 def start_search(n,input_ingredients):
         
         df = pd.read_csv('ricette6k.csv',encoding='iso-8859-1')
-        #result=""
+
         
         if input_ingredients !="":
             ingredients=input_ingredients
-            #result+="\n---Ingredienti inseriti in Input: "+ingredients
+
             result_text.insert(tk.END, "\n---Ingredienti inseriti in Input: "+ingredients)
 
         elif n>=0:
             print(" \n avvio ricerca ricette....")
 
             ingredients=df['ingredients'][n]
-            #result+="\n-----Consigli per la ricetta: "+df['title'][n]
-            #result+="\n---ingredienti ricetta: "+ingredients
+
             result_text.insert(tk.END,"\n-----Consigli per la ricetta: "+df['title'][n])
             result_text.insert(tk.END, "\n---ingredienti ricetta: "+ingredients)
 
             
-        #result+="\n"
-       
+
         recs = get_recs(ingredients)
             
         i=1
         while i<len(recs):
-            #print(" \n "+recs.ricetta[i])
-            #result_text.insert(tk.END,"\n---"+recs.ricetta[i])
-            #result_text.insert(tk.END,recs.ingredienti[i])
-            #result+="\n---"+recs.ricetta[i]
+
             result_text.insert(tk.END, "\n---"+recs.ricetta[i])
             i+=1
-        #print(result)
-        #return result
-            
 
-    
+
 
 def on_closing():
     if messagebox.askokcancel("Quit", "Vuoi uscire dall'applicazione?"):
@@ -359,19 +312,13 @@ def show_selected():
             selected.append(checkboxes[i].cget("text")+ " indx dataset: "+str(numbers[i]))
             
             start_search(numbers[i],"")
-    #print("\nresult  show_selected")
-    #print(result)
+
     buttons_frame.pack_forget()
     
     
 
 
-    '''
-    result_text.delete('1.0', tk.END)
-    result_text.insert(tk.END, "\n----------------------Selected:")
-    result_text.insert(tk.END , selected)
-    result_text.insert(tk.END, "\n")
-    '''
+
     if input_text.get() !='':
         ingredients = input_text.get()
         start_search(-1,ingredients)
@@ -379,7 +326,7 @@ def show_selected():
 
 
     result_text.insert(tk.END, "\n")   
-        #result_text.insert(tk.END, "Ingredienti inseriti: "+ ingredients)
+
         
     
    
@@ -394,18 +341,6 @@ root.title("No wAIste")
 sidebar_frame= ctk.CTkFrame(root)
 sidebar_frame.pack(pady=10,padx=10,fill="both", side="left")
 
-'''
-show_frame = ctk.CTkFrame(root)
-show_frame.pack(pady=10,padx=10,fill="both",expand=True,side="top")
-result_text = tkinter.Text(show_frame, state='disabled')
-result_text.pack(pady=10,padx=10,fill="both",expand=True)
-'''
-# create textbox
-#textbox = ctk.CTkTextbox(root)
-#textbox.insert("0.0", "CTkTextbox\n\n" + "")
-#result_text = ctk.CTkTextbox(root, state='disabled')
-#result_text.pack(pady=10,padx=10,fill="both",expand=True)
-#result_text.pack(pady=10,padx=10,fill="both",expand=True,side="top")
 
 input_frame= ctk.CTkFrame(root)
 input_frame.pack(pady=10,padx=10,fill="both",side="bottom")
@@ -460,7 +395,6 @@ input_frame.columnconfigure(1, weight=1)
 #default values
 appearance_mode_optionemenu.set("Dark")
 scaling_optionemenu.set("100%")
-
 
 
 if __name__ == "__main__":
