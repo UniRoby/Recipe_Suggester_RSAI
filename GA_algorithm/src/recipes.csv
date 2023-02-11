@@ -1,0 +1,261 @@
+id,title,ingredients,likes,prep_time,calories
+1,Tiramisù,"['uova', 'zucchero', 'caffè', 'panna', 'savoiardi']",100,60,500
+2,Pizza Margherita,"['farina', 'acqua', 'sale', 'lievito', 'pomodoro', 'mozzarella', 'basilico']",200,30,1000
+3,Insalata di pollo,"['pollo', 'insalata', 'pomodoro', 'maionese', 'formaggio']",70,15,400
+4,Spaghetti alla carbonara,"['spaghetti', 'uova', 'guanciale', 'pepe', 'parmigiano']",150,20,800
+5,Lasagne alla bolognese,"['lasagne', 'ragù', 'besciamella', 'parmigiano']",250,60,1200
+6,Curry di pollo,"['pollo', 'curry in polvere', 'latte di cocco', 'cipolla', 'aglio', 'zenzero fresco']",150,30,600
+7,Paella,"['riso per paella', 'gamberetti', 'cozze', 'piselli', 'saffron', 'pollo', 'aglio']",200,45,800
+8,Pad Thai,"['noodles di riso', 'gamberetti', 'uova', 'arachidi', 'cipolla', 'aglio', 'salsa di tamarindo', 'erba cipollina']",250,12,450
+9,Tacos al pastor,"['mais tortillas', 'maiale marinato', 'ananas', 'cipolla', 'coriandolo']",100,25,350
+10,Tandoori chicken,"['pollo', 'yogurt', 'spezie tandoori', 'limone', 'aglio', 'cipolla']",150,35,500
+11,Sushi,"['riso per sushi', 'alga nori', 'salmone', 'tonno', 'gamberi', ' avocado']",200,40,500
+12,Goulash ungherese,"['manzo', 'cipolla', 'aglio', 'pomodoro', 'paprika', 'carote']",150,60,700
+13,Biryani indiano,"['riso basmati', 'pollo', 'spezie', 'cipolla', 'piselli', 'pomodoro']",200,45,600
+14,Kebab turco,"['carne di agnello', 'cipolla', 'aglio', 'pomodoro', 'pane arabo']",250,30,500
+15,Ragoût belga,"['manzo', 'cipolla', 'carote', 'patate', 'pomodoro', 'brodo di manzo']",150,90,800
+17,Nacho messicano,"['nacho', 'fagioli', 'pomodoro', 'formaggio grattugiato', 'guacamole', 'salsa di pomodoro']",100,20,450
+18,Bouillabaisse francese,"['pesce', 'cozze', 'vongole', 'aglio', 'pomodoro', 'patate']",150,60,700
+19,Pho vietnamita,"['noodles di riso', 'manzo', 'fagioli verdi', 'cipolla', 'aglio', 'erba cipollina']",200,30,500
+20,Curry verde tailandese,"['pollo', 'latte di cocco', 'cipolla', 'aglio', 'coriandolo', 'basilico']",150,35,550
+21,Pescado a la talla messicano,"['pesce', 'limone', 'aglio', 'coriandolo', 'peperoncino']",200,20,400
+22,Pierogi polacchi,"['impasto per pierogi', 'patate', 'cipolla', 'formaggio', 'panna acida']",100,45,600
+23,Jambalaya americano,"['riso', 'gamberetti', 'salsiccia', 'pomodoro', 'cipolla', 'aglio']",150,30,700
+24,Paella spagnola,"['riso per paella', 'gamberetti', 'cozze', 'piselli', 'saffron', 'pollo', 'aglio']",200,45,800
+25,Fish and chips inglese,"['pesce', 'patatine fritte', 'maionese']",100,20,500
+26,Poutine canadese,"['patatine fritte', 'formaggio cheddar', 'salsa di pomodoro']",150,30,500
+27,Peking duck cinese,"['anatra', 'salsa di soia', 'aglio', 'cipolla', 'zenzero']",200,60,800
+28,Veal schnitzel austriaco,"['costolette di vitello', 'uova', 'pangrattato', 'limone', 'prezzemolo']",150,30,700
+29,Borscht russo,"['ravanelli', 'patate', 'cavolo', 'pomodoro', 'cipolla', 'aglio']",200,45,500
+30,Kofta indiano,"['carne macinata', 'cipolla', 'aglio', 'spezie', 'pomodoro', 'latte di cocco']",150,35,550
+31,Pescado frito spagnolo,"['pesce', 'farina', 'uova', 'pangrattato']",200,20,400
+32,Kofte turco,"['carne macinata', 'cipolla', 'aglio', 'pomodoro', 'pane arabo']",100,45,600
+33,Gumbo americano,"['pollo', 'salsiccia', 'gamberetti', 'cipolla', 'aglio', 'peperoncino']",150,30,700
+34,Paella valenciana,"['riso per paella', 'gamberetti', 'cozze', 'piselli', 'saffron', 'pollo', 'aglio']",200,45,800
+35,Fish pie inglese,"['pesce', 'patate', 'latte', 'cipolla', 'formaggio']",100,20,500
+36,Poutine Quebecoise,"['patatine fritte', 'formaggio cheddar', 'salsa di pomodoro']",150,20,550
+37,Pad Thai thailandese,"['noodles di riso', 'gamberi', 'uova', 'cipolla', 'aglio', 'erba cipollina']",200,30,500
+38,Tandoori chicken indiano,"['pollo', 'yogurt', 'spezie', 'cipolla', 'aglio']",150,40,550
+39,Borscht ucraino,"['ravanelli', 'patate', 'cavolo', 'pomodoro', 'cipolla', 'aglio']",200,45,500
+40,Goulash slovacco,"['manzo', 'cipolla', 'aglio', 'pomodoro', 'paprika', 'carote']",150,60,700
+41,Tikka masala indiano,"['pollo', 'latte di cocco', 'cipolla', 'aglio', 'spezie']",200,30,500
+42,Falafel egiziano,"['fagioli', 'cipolla', 'aglio', 'prezzemolo', 'spinaci']",100,20,400
+43,Ceviche peruviano,"['pesce', 'limone', 'aglio', 'coriandolo', 'peperoncino']",150,20,400
+44,Curry giapponese,"['pollo', 'riso', 'cipolla', 'aglio', 'carote', 'spezie']",200,30,500
+45,Laksa malese,"['noodles di riso', 'gamberetti', 'cipolla', 'aglio', 'cocco', 'spezie']",100,20,450
+46,Paella marinera spagnola,"['riso per paella', 'gamberetti', 'cozze', 'calamari', 'saffron', 'aglio']",150,45,800
+47,Sushi giapponese,"['riso per sushi', 'pesce', 'alga nori', 'cetriolo', 'wasabi', 'soia']",200,30,500
+48,Samosas indiane,"['pasta sfoglia', 'patate', 'cipolla', 'aglio', 'spezie', 'pomodoro']",150,20,550
+51,Risotto alla milanese,"['riso', 'cipolla', 'aglio', 'brodo', 'vino bianco', 'burro', 'formaggio']",200,30,600
+52,Bistecca alla Fiorentina,"['bistecca di manzo', 'sale', 'pepe']",150,20,800
+54,Penne all'arrabbiata,"['penne', 'aglio', 'peperoncino', 'pomodoro']",100,20,400
+55,Risotto allo zafferano,"['riso', 'cipolla', 'aglio', 'brodo', 'vino bianco', 'zafferano', 'formaggio']",150,30,500
+56,Spaghetti alle vongole,"['spaghetti', 'vongole', 'aglio', 'prezzemolo', 'vino bianco']",200,20,450
+60,Pesto alla genovese,"['basilico', 'aglio', 'pinoli', 'parmigiano', 'olio di oliva']",100,10,350
+61,Wonton soup cinese,"['wonton', 'brodo', 'cipolla', 'aglio', 'carote', 'spinaci']",150,20,400
+62,Sashimi giapponese,"['pesce crudo', 'alga nori', 'soia']",200,20,400
+63,Lomo saltado peruviano,"['manzo', 'pomodoro', 'cipolla', 'aglio', 'patate', 'riso']",100,30,600
+64,Fajitas messicane,"['manzo', 'peperoni', 'cipolla', 'aglio', 'tortillas di mais']",150,20,550
+65,Coq au vin francese,"['pollo', 'cipolla', 'aglio', 'carote', 'funghi', 'vino rosso', 'burro']",200,60,700
+69,Riso al curry,"['riso', 'cipolla', 'aglio', 'curry', 'latte di cocco', 'gamberetti']",150,30,500
+70,Hamburger di manzo,"['carne di manzo', 'pane per hamburger', 'insalata', 'pomodoro', 'cipolla']",200,20,600
+71,Carpaccio di manzo,"['manzo crudo', 'limone', 'olio di oliva', 'sale', 'pepe']",100,10,300
+72,Couscous marocchino,"['couscous', 'pomodoro', 'cipolla', 'aglio', 'coriandolo', 'zafferano']",150,20,450
+73,Enchiladas messicane,"['tortillas di mais', 'pomodoro', 'cipolla', 'aglio', 'fagioli', 'formaggio']",200,30,550
+74,Ramen giapponese,"['noodles di frumento', 'brodo di pollo', 'cipolla', 'aglio', 'erba cipollina', 'uova']",100,20,450
+75,Eggplant Parmesan,"['melanzane', 'pomodoro', 'cipolla', 'aglio', 'formaggio', 'pangrattato']",150,30,550
+76,Korma indiano,"['pollo', 'cipolla', 'aglio', 'latte di cocco', 'spezie', 'mandorle']",200,45,600
+77,Fajitas di pollo,"['pollo', 'peperoni', 'cipolla', 'aglio', 'tortillas di mais']",100,20,500
+78,Hummus libanese,"['ceci', 'aglio', 'limone', 'tahina', 'olio di oliva', 'sale']",150,10,300
+79,Churros spagnoli,"['farina', 'acqua', 'olio per frittura', 'zucchero', 'cannella']",200,20,600
+80,Samosa indiana,"['pasta per samosa', 'patate', 'cipolla', 'aglio', 'spezie']",100,30,450
+82,Croque-monsieur francese,"['pane', 'formaggio', 'prosciutto', 'senape', 'latte']",200,20,450
+83,Frikadeller danese,"['carne di maiale', 'cipolla', 'aglio', 'pangrattato', 'uova']",100,20,340
+87,Galette bretonne,"['farina', 'burro', 'acqua', 'sale', 'cipolla']",150,20,350
+89,Borscht polacco,"['ravanelli', 'patate', 'cavolo', 'pomodoro', 'cipolla', 'aglio']",100,45,500
+90,Pozole messicano,"['mais', 'pollo', 'cipolla', 'aglio', 'peperoncino', 'lime']",150,60,600
+92,Moussaka greca,"['melanzane', 'pomodoro', 'cipolla', 'aglio', 'carne di agnello', 'formaggio']",200,60,800
+94,Shakshuka araba,"['pomodoro', 'cipolla', 'aglio', 'peperoncino', 'uova', 'coriandolo']",150,20,450
+97,Wonton cinese,"['pasta per wonton', 'carne di maiale', 'cipolla', 'aglio', 'prezzemolo', 'soia']",150,30,550
+98,Empanadas argentine,"['pasta per empanadas', 'carne di manzo', 'cipolla', 'aglio', 'pomodoro', 'formaggio']",200,20,600
+99,Gado-gado indonesiano,"['insalata', 'pomodoro', 'cetriolo', 'tofu', 'arachidi', 'gamberetti']",100,15,400
+103,Kofta siriana,"['carne di agnello', 'cipolla', 'aglio', 'prezzemolo', 'spezie']",100,20,500
+104,Miso zuppa giapponese,"['dashi', 'miso', 'tofu', 'wakame']",150,15,300
+105,Goulash ceco,"['carne di manzo', 'cipolla', 'aglio', 'pomodoro', 'patate', 'paprika']",200,90,700
+107,Feijoada brasiliana,"['fagioli neri', 'carne di maiale', 'cipolla', 'aglio', 'riso']",150,60,700
+110,Cacciucco alla livornese,"['pesce', 'aglio', 'pomodorini', 'vino bianco', 'pane tostato']",150,60,600
+111,Polenta e osei,"['polenta', 'uova di picchio', 'formaggio']",200,45,500
+112,Cinghiale in umido,"['cinghiale', 'cipolla', 'aglio', 'carota', 'sedano', 'vino rosso']",100,90,700
+113,Panettone,"['farina', 'uova', 'zucchero', 'burro', 'uva passa', 'canditi']",150,120,800
+114,Pizzoccheri,"['pizzoccheri', 'cavolo verza', 'patate', 'formaggio']",200,30,570
+115,Zuppa di farro,"['farro', 'cipolla', 'aglio', 'carota', 'sedano', 'pomodoro']",100,45,400
+116,Frittura di paranza,"['pesce', 'farina', 'uova', 'pan grattato']",150,20,550
+117,Tagliatelle al ragù,"['tagliatelle', 'carne di manzo', 'cipolla', 'aglio', 'pomodoro', 'vino rosso']",200,30,600
+118,Bruschetta,"['pane', 'aglio', 'pomodoro', 'basilico']",100,10,200
+119,Torta di mele,"['mele', 'farina', 'uova', 'zucchero', 'burro']",150,60,500
+121,Fusilli al pesto,"['fusilli', 'basilico', 'aglio', 'pinoli', 'parmigiano', ""olio d'oliva""]",100,20,450
+122,Ribollita,"['pane raffermo', 'cavolo verza', 'cipolla', 'aglio', 'pomodoro', 'cannellini']",150,60,500
+123,Caponata siciliana,"['melanzane', 'pomodoro', 'cipolla', 'aglio', 'capperi', 'olive']",200,30,450
+125,Cacciucco alla viareggina,"['pesce', 'aglio', 'pomodorini', 'vino bianco', 'pane tostato']",150,60,600
+126,Risotto alla zucca,"['riso', 'zucca', 'cipolla', 'burro', 'formaggio']",200,30,500
+127,Spezzatino di manzo,"['manzo', 'cipolla', 'carota', 'sedano', 'pomodoro', 'vino rosso']",100,90,700
+136,Pho,"['brodo', 'noodles', 'manzo', 'erbe', 'scalogno']",200,45,450
+137,Ramen,"['brodo', 'noodles', 'maiale', 'uova', 'erbe']",100,60,600
+138,Ceviche,"['pesce crudo', 'lime', 'cipolla', 'peperoncino', 'coriandolo']",150,20,350
+140,Biryani,"['riso', 'pollo', 'spezie', 'yogurt']",100,90,600
+141,Couscous,"['couscous', 'pomodoro', 'cipolla', 'aglio', 'zucchine', 'ceci']",150,30,450
+142,Tagine,"['pollo', 'cipolla', 'aglio', 'carote', 'coriandolo', 'zenzero']",200,60,500
+143,Falafel,"['ceci', 'cipolla', 'aglio', 'prezzemolo', 'spezie']",100,20,350
+144,Pirozhki,"['pasta sfoglia', 'carne', 'patate', 'cipolla']",150,60,600
+145,Goulash,"['carne', 'cipolla', 'aglio', 'pomodoro', 'paprika']",200,90,700
+146,Borscht,"['barbabietole', 'cavolo', 'patate', 'cipolla', 'aglio']",100,60,500
+147,Kebab,"['carne di agnello', 'cipolla', 'pomodoro', 'cetriolo', 'salsa yogurt']",150,30,550
+148,Fajitas,"['carne', 'peperoni', 'cipolla', 'mais', 'fagioli']",200,20,600
+149,Jambalaya,"['riso', 'pollo', 'salsiccia', 'gamberetti', 'pomodoro', 'cipolla', 'aglio']",100,60,700
+152,Roast Beef,"['arrosto di manzo', 'patate', 'carote', 'cipolla']",200,90,800
+153,Shepherd's pie,"['carne di agnello', 'patate', 'carote', 'cipolla']",100,60,700
+154,Bangers and mash,"['salsicce', 'patate', 'cipolla']",150,30,550
+157,Samosas,"['pasta sfoglia', 'patate', 'cipolla', 'aglio', 'spezie']",150,30,350
+158,Tzatziki,"['yogurt', 'cetriolo', 'aglio', 'prezzemolo']",200,10,150
+159,Baklava,"['pasta fillo', 'noci', 'zucchero', 'miele', 'burro']",100,45,450
+160,Falooda,"['noodles', 'latte', 'rosewater', 'latte di cocco', 'frutta']",150,20,400
+161,Pavlova,"['uova', 'zucchero', 'limone', 'frutta fresca']",200,60,500
+162,Beef Stroganoff,"['manzo', 'cipolla', 'funghi', 'panna', 'senape']",100,30,600
+163,Perogies,"['pasta sfoglia', 'patate', 'cipolla', 'formaggio']",150,20,450
+164,Kofta,"['carne di manzo', 'cipolla', 'aglio', 'spezie']",200,30,550
+165,Kare-kare,"['manzo', 'cipolla', 'aglio', 'piselli', 'latte di cocco']",100,60,600
+166,Moussaka,"['melanzane', 'carne di agnello', 'cipolla', 'aglio', 'pomodoro']",150,90,700
+168,Empanadas,"['pasta sfoglia', 'carne', 'cipolla', 'pomodoro', 'formaggio']",100,20,350
+170,Ceviche di pesce,"['pesce crudo', 'lime', 'cipolla', 'peperoncino', 'coriandolo']",200,20,350
+175,Tortilla spagnola,"['patate', 'cipolla', 'uova']",150,20,350
+176,Ratatouille,"['melanzane', 'zucchine', 'pomodoro', 'cipolla', 'aglio']",200,30,400
+178,Gazpacho,"['pomodoro', 'cetriolo', 'cipolla', 'aglio', 'pane raffermo']",150,10,250
+179,Wiener Schnitzel,"['fettine di vitello', 'uova', 'pan grattato', 'prezzemolo']",200,20,450
+124,Polpette di carne,"['carne di manzo', 'cipolla', 'uovo', 'pangrattato', 'prezzemolo', 'sale', 'pepe']",200,20,450
+134,Stufato di manzo,"['manzo', 'cipolla', 'carote', 'sedano', 'pomodoro', 'vino rosso']",150,120,650
+150,Frittata di patate,"['patate', 'cipolla', 'uova', 'sale', 'pepe']",100,15,250
+182,Tajine di agnello,"['agnello', 'cipolla', 'carote', 'pomodoro', 'spezie', 'datteri']",150,60,550
+185,Shawarma,"['pane arabo', 'carne di agnello', 'cipolla', 'pomodoro', 'cetriolo', 'tahina']",150,20,450
+187,Pita con falafel,"['pita', 'falafel', 'cetriolo', 'pomodoro', 'tahina']",100,15,450
+191,Risotto al funghi porcini,"['riso', 'funghi porcini', 'cipolla', 'vino bianco', 'burro', 'parmigiano']",200,30,550
+192,Minestrone,"['verdure miste', 'pomodoro', 'fagioli', 'pasta', 'parmigiano']",100,45,450
+193,Branzino alla griglia,"['branzino', 'limone', ""olio d'oliva"", 'sale', 'pepe']",150,20,450
+194,Irish Stew,"['agnello', 'patate', 'carote', 'cipolla', 'pomodoro', 'piselli']",200,90,650
+195,Fish and Chips,"['merluzzo', 'farina', 'uova', 'pangrattato', 'olio di semi']",100,20,500
+196,Irish Soda Bread,"['farina', 'bicarbonato di sodio', 'lievito', 'latte', 'burro']",150,30,450
+198,Cannelloni alla bolognese,"['cannelloni', 'ragù', 'besciamella', 'parmigiano']",100,45,650
+199,Gnocchi al pomodoro,"['gnocchi', 'pomodoro', 'basilico', 'mozzarella']",150,30,550
+200,Irish Boxty,"['patate', 'farina', 'lievito', 'latte', 'burro']",200,20,450
+205,Fish & Chips,"['merluzzo', 'farina', 'uova', 'pangrattato', 'olio di semi']",100,20,500
+211,Frittata di spinaci,"['spinaci', 'uova', 'formaggio', 'cipolla', 'olio', 'sale', 'pepe']",120,15,300
+214,Insalata di riso,"['riso', 'insalata', 'pomodoro', 'maionese', 'formaggio']",110,20,400
+215,Polpette di pesce,"['pesce', 'pangrattato', 'uova', 'aglio', 'prezzemolo', 'sale', 'pepe']",90,20,400
+219,Curry indiano,"['carne', 'spezie', 'cipolla', 'aglio', 'pomodoro', 'latte di cocco']",200,30,600
+225,Bobotie,"['carne macinata', 'cipolla', 'uova', 'latte di cocco', 'spezie', 'pane grattugiato']",110,30,600
+228,Sauerbraten,"['manzo', 'cipolla', 'carote', 'patate', 'vino rosso', 'spezie']",180,240,600
+231,Risotto al gorgonzola e noci,"['riso', 'gorgonzola', 'noci', 'cipolla', 'burro', 'vino bianco', 'brodo di pollo']",150,30,600
+233,Polpette al sugo,"['carne macinata', 'pane raffermo', 'uova', 'formaggio', 'pomodoro', 'aglio', 'basilico']",150,30,600
+234,Cannoli siciliani,"['pasta fillo', 'olio', 'ricotta', 'zucchero', 'cacao', 'vaniglia', 'canditi']",200,30,500
+237,Saltimbocca alla romana,"['fettine di vitello', 'prosciutto', 'salvia', 'burro', 'vino bianco']",150,15,600
+238,Arancini,"['riso', 'pomodoro', 'mozzarella', 'uova', 'pangrattato', 'olio']",180,30,600
+240,Timballo di melanzane,"['melanzane', 'pomodoro', 'mozzarella', 'uova', 'pangrattato', 'olio']",150,45,600
+242,Parmigiana di melanzane,"['melanzane', 'pomodoro', 'mozzarella', 'pangrattato', 'olio', 'basilico']",170,45,600
+243,Polenta con sugo di cinghiale,"['polenta', 'cinghiale', 'pomodoro', 'cipolla', 'aglio', 'vino', 'olio']",150,60,800
+245,Ossobuco,"['ossobuco', 'pomodoro', 'cipolla', 'carote', 'sedano', 'vino', 'olio']",150,90,800
+246,Riso e fagioli,"['riso', 'fagioli', 'pomodoro', 'cipolla', 'aglio', 'olio']",180,30,400
+248,Pasta alla Norma,"['pasta', 'pomodoro', 'melanzane', 'ricotta salata', 'basilico', 'aglio', 'olio']",150,30,500
+252,Panino con carne alla griglia,"['pane', 'carne', 'insalata', 'pomodoro', 'maionese', 'formaggio']",120,35,400
+255,Cotolette alla milanese,"['carne di vitello', 'uova', 'pangrattato', 'prezzemolo', 'limone']",190,30,700
+256,Caprese,"['mozzarella di bufala', 'pomodorini', 'basilico', 'olio extravergine di oliva']",150,15,400
+262,Couscous con verdure,"['couscous', 'verdure miste', 'pomodorini', 'cipolla', 'aglio', 'coriandolo', 'zenzero']",150,45,500
+263,Zuppa di pomodoro,"['pomodori', 'cipolla', 'aglio', 'pane raffermo', 'basilico']",170,30,300
+264,Guacamole,"['avocado', 'pomodoro', 'cipolla', 'lime', 'cilantro']",120,15,200
+268,Biriyani di pollo,"['riso basmati', 'pollo', 'piselli', 'cipolla', 'aglio', 'spezie']",180,60,600
+275,Hummus,"['ceci', 'aglio', 'tahini', 'limone', 'olio']",120,15,300
+276,Fajitas,"['tortillas', 'manzo o pollo', 'peperoni', 'cipolla', 'spezie']",180,30,500
+278,Spiedini di pollo,"['pollo', 'cipolla', 'peperoni', 'aglio', 'olio']",170,30,500
+279,Peking duck,"['anatra', 'salsa di ostriche', 'cipolla', 'aglio', 'zenzero']",190,60,600
+280,Lomo saltado,"['manzo', 'pomodori', 'cipolla', 'piselli', 'patate', 'spezie']",150,30,600
+281,Churros,"['farina', 'acqua', 'olio', 'zucchero', 'cannella']",190,25,600
+286,Papas a la huancaína,"['patate', 'formaggio fresco', 'latte', 'oli', 'peperoncino']",170,25,400
+288,Laksa,"['brodo di cocco', 'tagliatelle di riso', 'gamberetti', 'cipolla', 'aglio', 'latte di cocco', 'spezie']",180,45,700
+289,Chimichurri,"['prezzemolo', 'aglio', 'cipolla', 'olio', 'aceto']",120,10,200
+295,Frikadeller,"['carne di manzo', 'cipolla', 'uova', 'pangrattato']",170,30,200
+297,Chow mein,"['noodles di frumento', 'pollo', 'verdure', 'salsa di soia']",150,30,500
+310,Risotto al radicchio e speck,"['riso', 'radicchio', 'speck', 'cipolla', 'vino', 'formaggio']",180,30,500
+315,Polenta con sugo di funghi,"['polenta', 'funghi', 'cipolla', 'aglio', 'vino', 'olio']",190,45,700
+317,Zuppa di pesce,"['pesce fresco', 'pomodoro', 'cipolla', 'aglio', 'vino', 'olio']",170,45,600
+320,Gelato alla vaniglia,"['latte', 'panna', 'uova', 'zucchero', 'baccello di vaniglia']",170,60,600
+323,Focaccia,"['farina', 'acqua', 'olio', 'sale', 'lievito']",160,45,400
+334,Panna cotta,"['panna', 'latte', 'zucchero', 'vaniglia']",160,45,500
+330,Fettuccine al ragu di cinghiale,"['fettuccine', 'cinghiale', 'pomodoro', 'cipolla', 'aglio', 'vino', 'olio']",150,60,700
+331,Braciole di maiale,"['fette di maiale', 'aglio', 'prezzemolo', 'pangrattato', 'uova', 'olio']",170,30,600
+332,Cannoli siciliani,"['impasto per cannoli', 'ricotta', 'zucchero', 'cacao', 'canditi']",180,45,500
+328,Ravioli al burro e salvia,"['ravioli', 'burro', 'salvia', 'parmigiano']",170,30,500
+325,Crostata di marmellata,"['impasto per crostata', 'marmellata', 'zucchero', 'uova']",200,45,600
+326,Riso al forno,"['riso', 'pomodoro', 'mozzarella', 'basilico', 'olio']",190,45,700
+335,Gnocchi di zucca,"['zucca', 'farina', 'uova', 'noce moscata', 'parmigiano']",200,45,600
+336,Polenta concia,"['polenta', 'formaggio', 'burro']",190,30,700
+337,Risotto alla zucca e salsiccia,"['riso', 'zucca', 'salsiccia', 'cipolla', 'vino', 'formaggio']",150,30,600
+338,Crespelle alla ricotta,"['uova', 'farina', 'latte', 'ricotta', 'spinaci', 'formaggio']",170,45,600
+339,Torta di riso,"['riso', 'latte', 'zucchero', 'uova', 'vaniglia']",160,60,700
+340,Focaccia barese,"['farina', 'acqua', 'olio', 'sale', 'lievito', 'pomodorini', 'basilico', 'aglio']",150,45,400
+341,Spiedini di gamberi,"['gamberi', 'aglio', 'prezzemolo', 'limone', 'olio']",170,15,300
+342,Pasta e fagioli,"['pasta', 'fagioli', 'pomodoro', 'cipolla', 'aglio', 'olio']",180,30,400
+343,Pizza alla napoletana,"['impasto per pizza', 'pomodoro', 'mozzarella di bufala', 'basilico', 'olio']",150,30,500
+345,Tortellini in brodo,"['tortellini', 'brodo', 'parmigiano']",200,30,400
+348,Tagliatelle al ragù di cinghiale,"['tagliatelle', 'cinghiale', 'pomodoro', 'cipolla', 'aglio', 'vino', 'olio']",170,60,700
+349,Budino al cioccolato,"['latte', 'zucchero', 'uova', 'cioccolato']",160,30,600
+351,Gnocchi alla sorrentina,"['gnocchi', 'pomodoro', 'mozzarella', 'basilico']",190,30,700
+352,"Spaghetti aglio, olio e peperoncino","['spaghetti', 'aglio', 'olio', 'peperoncino', 'prezzemolo']",150,15,400
+353,Parmigiana di zucchine,"['zucchine', 'pomodoro', 'mozzarella', 'basilico', 'olio']",170,45,600
+355,Pasta alla amatriciana,"['pasta', 'guanciale', 'pomodoro', 'pecorino']",150,30,500
+359,Frittata di pasta,"['pasta', 'uova', 'formaggio', 'pomodoro', 'basilico']",150,30,500
+360,Timballo di riso,"['riso', 'pomodoro', 'mozzarella', 'basilico', 'uova', 'formaggio']",170,60,700
+372,Risotto ai frutti di mare,"['riso', 'frutti di mare', 'cipolla', 'vino', 'aglio', 'prezzemolo']",170,60,700
+375,Focaccia al rosmarino,"['farina', 'acqua', 'olio', 'sale', 'lievito', 'rosmarino']",170,45,400
+379,Fettuccine al burro e salvia,"['fettuccine', 'burro', 'salvia', 'formaggio']",150,15,400
+380,Gazpacho di pomodoro,"['pomodori', 'cipolla', 'aglio', 'peperoncino', 'basilico', 'pane']",170,30,400
+381,Panzanella,"['pane', 'pomodori', 'cipolla', 'basilico', 'olio']",160,15,300
+390,Focaccia alle olive,"['farina', 'acqua', 'olio', 'sale', 'lievito', 'olive']",150,45,400
+391,Panino con porchetta,"['pane', 'porchetta', 'insalata', 'pomodoro']",170,15,600
+392,Carciofi alla romana,"['carciofi', 'aglio', 'prezzemolo', 'olio']",180,30,400
+393,Zuppa di legumi,"['legumi misti', 'pomodoro', 'cipolla', 'aglio', 'olio']",200,60,600
+395,Spiedini di mozzarella e pomodorini,"['mozzarella', 'pomodorini', 'basilico', 'olio']",150,15,400
+396,Linguine alle vongole,"['linguine', 'vongole', 'aglio', 'prezzemolo', 'vino']",170,30,400
+399,Polpettone,"['carne macinata', 'uova', 'pangrattato', 'pomodoro', 'cipolla', 'aglio']",170,60,700
+401,Fettuccine al burro e parmigiano,"['fettuccine', 'burro', 'parmigiano', 'noce moscata']",200,15,400
+402,Baccalà alla vicentina,"['baccalà', 'cipolla', 'olive', 'pinoli', 'prezzemolo']",190,45,600
+403,Pizza quattro formaggi,"['impasto per pizza', 'mozzarella', 'gorgonzola', 'fontina', 'parmigiano']",150,30,500
+404,Riso alla pilota,"['riso', 'salsiccia', 'cipolla', 'pomodoro', 'formaggio']",170,45,600
+412,Crêpes Suzette,"['farina', 'uova', 'latte', 'zucchero', 'arancia', 'burro', 'Grand Marnier']",150,30,500
+415,Quiche Lorraine,"['pasta sfoglia', 'uova', 'latte', 'prosciutto', 'formaggio']",150,30,500
+416,Steak au Poivre,"['steak', 'burro', 'cipolla', 'pepe', 'vino rosso']",180,15,600
+417,Crème brûlée,"['latte', 'panna', 'uova', 'zucchero', 'vaniglia']",200,45,600
+418,Pot-au-feu,"['manzo', 'verdure', 'cipolla', 'carote', 'sedano', 'aglio']",190,90,800
+419,Boeuf bourguignon,"['manzo', 'cipolla', 'carote', 'sedano', 'aglio', 'funghi', 'vino rosso']",150,120,700
+420,Tarte Tatin,"['pasta sfoglia', 'mele', 'burro', 'zucchero']",170,30,600
+421,Omelette aux fines herbes,"['uova', 'latte', 'prezzemolo', 'erba cipollina', 'timo', 'parmigiano']",160,15,400
+422,Filetto di manzo al pepe verde,"['filetto di manzo', 'pepe verde', 'burro', 'vino']",220,45,800
+423,Gong Bao chicken,"['petto di pollo', 'salsa di fagioli neri', 'aglio', 'sedano', 'peperoncino', 'mandorle']",200,30,600
+424,Zuppa di wonton,"['wonton', 'brodo di pollo', 'verdure', 'salsa di soia']",180,20,400
+425,Riso frito con verdure,"['riso', 'verdure', 'salsa di soia', 'aglio', 'olio']",190,20,500
+426,Ma po tofu,"['tofu', 'pasta di fagioli rossi', 'aglio', 'sedano', 'peperoncino']",220,30,600
+427,Pollo alle mandorle,"['petto di pollo', 'mandorle', 'salsa di soia', 'zucchero', 'aglio']",210,25,600
+428,Zuppa di noodles cinesi,"['noodles', 'brodo di pollo', 'verdure', 'salsa di soia']",200,20,400
+431,Spiedini di pollo al sesamo,"['petto di pollo', 'semi di sesamo', 'salsa di soia', 'zucchero', 'aglio']",240,30,700
+432,Zuppa di frutti di mare,"['frutti di mare', 'brodo di pesce', 'verdure', 'salsa di soia']",260,45,600
+433,Mapo tofu con carne di maiale,"['tofu', 'carne di maiale', 'pasta di fagioli rossi', 'aglio', 'sedano', 'peperoncino']",210,35,700
+434,Noodles lo mein,"['noodles', 'carne tritata', 'verdure', 'salsa di soia', 'aglio']",220,25,600
+429,Baozi,"['pasta per baozi', 'ripieno di carne tritata', 'cipolla', 'aglio']",250,45,600
+435,Char siu,"['maiale', 'salsa di soia', 'zucchero', 'vino di riso', 'spezie']",280,60,700
+437,Riso al vapore con carne e verdure,"['riso', 'carne tritata', 'verdure', 'salsa di soia', 'aglio']",260,20,500
+438,Zuppa di pollo e funghi,"['pollo', 'funghi shiitake', 'brodo di pollo', 'verdure', 'salsa di soia']",270,45,500
+439,Pollo Kung Pao,"['pollo', 'pasta di fagioli rossi', 'arachidi', 'cipolla', 'aglio', 'peperoncino']",280,25,600
+440,Riso frito con gamberi e verdure,"['riso', 'gamberi', 'verdure', 'salsa di soia', 'aglio', 'olio']",290,20,600
+441,Zuppa di noodles e manzo,"['noodles', 'manzo', 'verdure', 'salsa di soia', 'aglio']",300,25,600
+442,Pollo alle mandorle in stile Szechuan,"['pollo', 'mandorle', 'salsa di soia', 'zucchero', 'aglio', 'peperoncino Szechuan']",280,25,600
+443,Zuppa di wonton e carne,"['wonton', 'carne tritata', 'verdure', 'brodo di pollo', 'salsa di soia']",270,20,500
+444,Riso frito con pollo e verdure,"['riso', 'pollo', 'verdure', 'salsa di soia', 'aglio', 'olio']",260,20,500
+445,Zuppa di tofu e verdure,"['tofu', 'verdure', 'brodo vegetale', 'salsa di soia']",250,20,400
+446,Riso al vapore con frutti di mare,"['riso', 'frutti di mare', 'salsa di soia', 'aglio', 'erba cipollina']",280,20,600
