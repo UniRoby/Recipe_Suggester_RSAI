@@ -5,11 +5,14 @@
 \usepackage{venndiagram}
 \usepackage{hyperref}
 \usepackage{multirow}
-
+\usepackage{graphicx}
 \usepackage{geometry}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{float}
 \geometry{margin=1.1in}
 
-\title{Fondamenti di Intelligenza Artificiale}
+\title{No wAIste}
 \author{Alessandro Satta, Roberto Piscopo}
 \date{2023}
 
@@ -19,88 +22,375 @@
 
 \chapter{Introduzione}
 \section{Contesto}    
-Il progetto nasce dal problema che molte persone hanno,ovvero avere in dispensa/frigo degli ingredienti dimenticati oppure accumulati e non sapere cosa cucinare. 
+Il progetto nasce dal problema che molte persone hanno, ovvero avere in dispensa/frigo degli ingredienti dimenticati oppure accumulati e non sanno cosa cucinare. Oppure banalmente ottenere nuove idee per delle ricette in base ad altre che ci piacciono.
 
 \section{Idea}
-Il nostro progetto ha lo scopo di creare un agente intelligente capace di consigliare una o più ricette in base a quello che l’utente ha a disposizione  
-
-\section{Problemi}
-Analizzando la nostra idea è sorto un grosso problema: l’utente forse ha tutti gli ingredienti di quella ricetta consigliata ma non ha forse 1 ora per preparala. Quindi ci siamo accorti che dovevamo includere un altro dettaglio ovvero il tempo di preparazione. 
-
-La prima cosa da fare quando si progetta un agente intelligente è la definizione delle Specifiche Peas 
+Il nostro progetto ha lo scopo di creare un agente intelligente capace di consigliare una o più ricette in base a quello che l’utente ha a disposizione, o che gli piace 
 
 \chapter{PEAS}
 \section{Specifiche}
-La prima cosa da fare quando si progetta un agente intelligente è la definizione delle Specifiche Peas 
+La prima cosa da fare quando si progetta un agente intelligente è la definizione delle Specifiche Peas
 
- Performance: Migliore ricetta in base agli ingredienti forniti, privilegiando quella con il numero di likes maggiore e tempo di preparazione minore. 
+Performance: Migliore ricetta in base agli ingredienti forniti
 
-Ambiente:  
-
-L’ambiente nel quale il nostro agente opera è composto da tutte le ricette con i relativi : id, titolo, ingredienti, likes, tempo di preparazione e calorie. 
-
-L’ambiente risulta: 
-
-Completamente osservabile: si ha accesso a tutte le informazioni di ogni ricetta 
-
-deterministico: l'agente sa esattamente cosa aspettarsi dall'ambiente in base alle informazioni fornite e agli input dell'utente. 
-
-Oppure? 
-
-Stocastico: L’agente compirà azioni specifiche che possono portare a risultati e stati differenti, e quindi lo sato successivo dell’ambiente risulta essere incerto 
-
-L'ambiente deterministico significa che l'agente sa esattamente cosa aspettarsi in base alle informazioni fornite e agli input dell'utente. In altre parole, l'agente sa che dati gli stessi input, otterrà sempre lo stesso output, l'agente sa che se gli vengono forniti gli stessi ingredienti, troverà sempre la stessa ricetta migliore nell'ambiente statico 
-
-episodico: l'agente si trova in un singolo episodio in cui riceve gli ingredienti in input e restituisce la migliore ricetta come output, senza alcuna interazione ulteriore con il mondo esterno. 
-
-Statico: L’insieme delle ricette e le relative informazioni non cambiano nel corso del tempo 
-
-Oppure Semi-Dinamico: L’insieme delle ricette non cambia, ma il comportamento dell’agente sull’ambiente cambia 
-
+Enviroment: L’ambiente nel quale il nostro agente opera è composto da tutte le ricette del dataset con i relativi: titolo, ingredienti, ratings, tempo di preparazione, istruzioni, tipologia
+L’ambiente risulta:
+Completamente osservabile: si ha accesso a tutte le informazioni di ogni ricetta
+deterministico: L'ambiente deterministico significa che l'agente sa esattamente cosa aspettarsi in base alle informazioni fornite e agli input dell'utente. In altre parole, l'agente sa che dati gli stessi input, otterrà sempre lo stesso output, l'agente sa che se gli vengono forniti gli stessi ingredienti, troverà sempre la stessa ricetta migliore nell'ambiente statico
+episodico: l'agente si trova in un singolo episodio in cui riceve gli ingredienti in input e restituisce la migliore ricetta come output, senza alcuna interazione ulteriore con il mondo esterno.
+Statico: L’insieme delle ricette e le relative informazioni non cambiano nel corso del tempo
+Discreto: L’agente ha a disposizione un numero limitato di azioni
 Attuatori: L'algoritmo utilizzato per generare le possibili soluzioni e selezionare la migliore. 
+Sensori: Gli input dell'utente, ovvero la lista degli ingredienti.
 
-Discreto: L’agente ha a disposizione un numero limitato di azioni 
-
-Sensori: Gli input dell'utente, ovvero la lista degli ingredienti. 
-
-Singolo Agente: è presente solo un agente che opera nell’ambiente 
+Singolo Agente: è presente solo un agente che opera nell’ambiente
 
 \chapter{Dataset}
 \section{Creazione Dataset}
-Non esistendo dei dataset di ricette in italiano, abbiamo dovuto crearlo noi. Per farlo abbiamo utilizzato dei tool online. Il nostro dataset ha circa 300 ricette ed è un file CSV di questo tipo: 
+Non esistendo dei dataset di ricette in italiano, abbiamo dovuto crearlo noi. Per farlo abbiamo utilizzato la tecnica del Web Scraping, ovvero una tecnica tramite la quale estrarre dati da un sito web, nel nostro caso da \href{https://www.giallozafferano.it/}{giallo zafferano}. 
+Abbiamo utilizzato una libreria di python chiamata recipe-scrapers insieme alla llibreria BeautifulSoup
+Installabile con il comando pip install recipe-scrapers.   
+BeautifulSoup è stato utilizzata per prendere tutti i link delle ricette delle 426 pagine di GialloZafferano.
+    \begin{figure}[H]
+        \centering
+        {\includegraphics[width=0.9\textwidth]{img/img1.jpg}}
+    \end{figure}
+Dopodichè  per ogni pagina di una ricetta sono state usate le funzioni di recipe scrapers per ottenere le feature da inserire nel dataset quali: titolo ricetta, tempo preparazione, valutazione, categoria/tipologia, istruzioni.
+    \begin{figure}[H]
+        \centering
+        {\includegraphics[width=0.9\textwidth]{img/img2.jpg}}
+    \end{figure}
+Poi tutte le ricette sono state salvate in un file csv
+    \begin{figure}[H]
+        \centering
+        {\includegraphics[width=0.9\textwidth]{img/img3.jpg}}
+    \end{figure}
+
+
+\section{Data Preparation \& Data Cleaning}
+Un primo problema si è presentato con la lista degli ingredienti. Se prediamo ad esempio la ricetta “Tiramisù” i suoi ingredienti sono: 
+
+\textbf{Mascarpone} 750 g
+
+\textbf{Uova}(freschissime, circa 5 medie) 260 g
+
+\textbf{Savoiardi} 250 g
+
+\textbf{Zucchero} 120 g
+
+\textbf{Caffè}(della moka, zuccherato a piacere) 300 g
+
+A noi interessano solo i nomi degli ingredienti, in quanto saranno utilizzati per trovare ricette simili dati degli ingredienti in input. Quindi andavano cancellate tutte le grammature e altre informazioni non necessarie come “freschissime, circa 5 medie”.
+
+Per fare questo è stato creato un programma sempre in python che andava a rimuovere le grammature, i numeri, informazioni nelle parentesi ed informazioni di contorno in generale. Inoltre bisognava anche andare a sostituire alcuni ingredienti composti usando solo l’ingrediente principale ad esempio: Estratto di vaniglia -> Vaniglia. 
+
+Poi venivano rimossi tutti i caratteri non necessari come: [,](,) /, ecc
+
+Andavano rimosse tutti quei dettagli come “piccola”. E se ci sta piccolo o piccoli ? Abbiamo rimosso tutte le varianti manualmente, (solo dopo siamo venuti a conoscenza di funzioni automatiche di lemmatizzazione e stemming)
+
+Tutti gli ingredienti sono stati portati in lower Case.
+
+Fatto ciò la lista di ingredienti pulita veniva salvata come stringa ed inserita al posto della lista di ingredienti precedente alla pulizia. Alla fine del processo veniva creato un novo dataset.
+
+La fase di pulizia del dataset però non finiva qui. Abbiamo creato un programma per l’esplorazione del dataset in modo tale da effettuare il conteggio delle ricette, del tempo medio per la preparazione , del numero di ricette per tipologia, del numero di ingredienti totali, del numero di ingredienti più usati, di quelli meno usati, del conteggio per ogni singolo ingrediente. Ed è proprio quest’ultimo dato che ci ha permesso di pulire ulteriormente il dataset da ricette superflue. Difatti abbiamo eliminato circa un centinaio di ricette che avevano ingredienti unici, troppo specifici che non ci avrebbero aiutato nell’identificazione di ricette simili, in quanto uniche nel loro genere. (Per il codice vedere removeRow.py in RecipeScraper)
+
+\begin{figure}[H]
+        \centering
+        {\includegraphics[width=0.9\textwidth]{img/img4.jpg}}
+\end{figure}
+[6037 rows x 6 columns]
+
+ Il nostro dataset ha poco più di 6000 ricette ed è un file CSV.
+
+\begin{figure}[H]
+        \centering
+        {\includegraphics[width=0.9\textwidth]{img/img5.jpg}}
+\end{figure}
+
+
+Esempio prime righe…
+
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|} 
  \hline
- ID & Titolo & Ingredienti & likes & Prep time & Calorie \\ [0.5ex] 
+ Titolo & Ingredienti & tempo & Valutazione & Tipologia & Istruzioni \\ [0.5ex] 
  \hline
- 335 & Gnocchi di zucca  & Zucca, farina, uova, noce moscata, parmigiano  & 200 & 45 min & 600 \\
+Tiramisù  & mascarpone,uova,savoiardi,zucchero,caffè,cacao & 46 & 4.2 & Dolci & Per preparare il tiramisù preparate il caffé c... \\
  \hline
- 160 & Falooda & noodles,latte,rosewater,latte di cocco,frutta  & 150 & 20 min & 400 \\
- \hline
-175 & Tortilla spagnola & patate,cipolla,uova  & 150 & 20 min & 350 \\
- \hline
-342 & Pasta e Fagioli & pasta,fagioli,pomodoro,cipolla,aglio,olio  & 170 & 15 min & 300 \\
- \hline
+Spaghetti alla carbonara & spaghetti,guanciale,uova,pecorino,pepe & 25 & 4.2 & Primi piatti  & Per preparare gli spaghetti alla carbonara com...  \\
+\hline
 \multicolumn{6}{|c|}{ecc...} \\
  \hline
 \end{tabular}
 \end{center}
 
+Conteggio ingredienti è stato fatto sia con la libreria nltk sia con la libreria csv leggendo le righe: 
 
-\section{Data Preparation}
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}[b]{0.4\linewidth}
+    \includegraphics[width=\linewidth]{img/img6.jpg}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.4\linewidth}
+    \includegraphics[width=\linewidth]{img/img7.jpg}
+  \end{subfigure}
+\end{figure}
 
-\section{Data Cleaning}
- Essendo il dataset creato da noi, non ha necessitato di una rimozione di ricette ridondanti o di dati mancanti. 
+Conteggio ricette per Tipologia 
 
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}[b]{0.4\linewidth}
+    \includegraphics[width=\linewidth]{img/img8.jpg}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.4\linewidth}
+    \includegraphics[width=\linewidth]{img/img9.jpg}
+  \end{subfigure}
+\end{figure}
+\section{Feature Scaling}
+Non c’erano dati numeri particolarmente discordanti e quindi non c’è stato bisogno di scalare e normalizzare. 
 \section{Feature Selection}
-Come già detto , il dataset delle ricette è stato creato e quindi di seguito vengono spiegati i motivi di ogni caratteristica: 
+Come già detto , il dataset delle ricette è stato creato e quindi di seguito vengono spiegati i motivi di ogni caratteristica:
 \begin{itemize}
-	\item Id: utile per identificare una specifica ricetta 
 	\item Titolo: è utile per mostrare all’utente la ricetta consigliata 
 	\item Ingredienti: è la feature dominante in quanto
-	\item Like: 
-	\item Prep time:
-	\item Calorie:
+	\item Rating: utile per capire se una determinata ricetta piace agli utenti o meno (non verrà usata nella soluzione finale)
+	\item Prep time:è utile per capire la difficoltà della preparazione
+	\item Tipologia/Categoria: è utile per capire che tipologia di ricetta è
  \end{itemize}
 
+Abbiamo pensato di creare un agente intelligente capace di suggerire delle ricette in base ad una serie di ingredienti in input.
+
+Abbiamo provato a realizzare ciò attraverso gli Algoritmi Genetici. (per il codice vedere cartella GA) (Dataset Vecchio utilizzato : id, title, ingredients, likes, prep\_time, Solo 300 ricette)
+
+Un GA è una proceduta ad alto livello (meta-euristica) ispirata alla genetica per definire un algoritmo di ricerca. Evolve una popolazione di individui (soluzioni candidate) producendo di volta in volta soluzioni sempre migliori rispetto ad una funzione obiettivo, fino a raggiungere l’ottimo o un’altra condizione di terminazione. La creazione di nuove generazioni di individui avviene applicando degli operatori genetici, precisamente selezione, crossover e mutazione.
+
+\textbf{Nel nostro caso le caratteristiche del GA erano le seguenti:}
+Codifica individuo (ricetta) era formata da un array di 8 interi che potevano assumere il valore solo di 0 o 1. L’intero individuo andava ad individuare l’indice di una riga del dataset e quindi di una ricetta
+
+Size popolazione: 5
+
+Selezione: abbiamo usato la tecnica dei Steady-State GA, invece di generare nuove generazioni si va a migliorare costantemente quella attuale. Si selezionano i due migliori individui come genitori
+
+Crossover: il crossover (Single/Two-Point) avviene tra i due genitori selezionati al punto precedente. Il nuovo individuo andrà a sostituire il peggiore della popolazione. Nel caso in cui si va a creare un individuo già esistente nella popolazione allora si applica la mutazione (bit flip)
+
+Stopping condition: terminiamo l’evoluzione quando si superano le 500 iterazioni o quando si è raggiunta una certa fitness.
+
+La funzione di fitness è data dal numero di ingredienti in comune con quelli inseriti moltiplicati per i likes  il tutto diviso per il tempo di preparazione.
+
+Dopo varie prove e modifiche agli operatori genetici ci siamo resi conto che l’algoritmo era un po' troppo casuale. Molte volte trovava le due migliori ricette in una 50ina di generazioni altre volte arrivava fino a 500 iterazioni trovando due ricette con fitness molto basse.
+
+Così abbiamo pensato che la codifica non era adatta o probabilmente non era adatto al nostro problema un algoritmo Genetico.
+
+Quindi abbiamo optato per un algoritmo di ricerca informata. Il più utilizzato tra gli algoritmi di ricerca informata è l’A*. (Dataset Vecchio utilizzato : id, title, ingredients, likes, prep\_time, Solo 300 ricette)
+
+Per il codice vedere la cartella AStar
+
+L'algoritmo A* è un algoritmo di ricerca che utilizza una funzione di valutazione per determinare la distanza tra un nodo corrente e un nodo obiettivo. In questo caso, la funzione di valutazione è "evaluate\_recipe" che valuta una singola ricetta sulla base di quanti ingredienti corrispondono a quelli forniti in input e sulla base del numero di likes della ricetta.
+
+La funzione "evaluate\_recipe" valuta una singola ricetta in base agli ingredienti forniti in input. La funzione utilizza un ciclo for per verificare se ciascun ingrediente della ricetta è presente negli ingredienti forniti in input. Se un ingrediente è presente, la valutazione della ricetta viene incrementata di 1. Inoltre, la valutazione della ricetta viene incrementata anche dal numero di "likes" della ricetta diviso 100,per normalizzare i "likes"
+\begin{figure}[H]
+        \centering
+        {\includegraphics[width=0.9\textwidth]{img/img10.jpg}}
+\end{figure}
+
+La funzione "find\_best\_recipe" utilizza l'algoritmo A* per trovare la migliore ricetta possibile. Inizia creando due liste: "open\_list" e "closed\_list". "open\_list" contiene tutte le ricette del dataset all'inizio, mentre "closed\_list" è vuota.
+
+La funzione "find\_best\_recipe" utilizza l'algoritmo A* per trovare la migliore ricetta possibile dalle ricette date in input. Inizialmente, la lista "open\_list" contiene tutte le ricette e la lista "closed\_list" è vuota. Poi, all'interno del ciclo while, l'algoritmo seleziona la ricetta con la valutazione più alta dalla lista "open\_list" e la sposta nella lista "closed\_list". Successivamente, verifica se tutti gli ingredienti della ricetta corrente sono presenti negli ingredienti forniti in input. Se lo sono, la ricetta viene aggiunta alla lista "best\_recipes".
+
+L'algoritmo termina quando la lista "open\_list" è vuota e restituisce la lista "best\_recipes" contentenente le migliori ricette
+\begin{figure}[H]
+        \centering
+        {\includegraphics[width=0.9\textwidth]{img/img11.jpg}}
+\end{figure}
+
+Il programma funzionava abbastanza bene riusciva a dare in output le ricette che ottimizzavano gli ingredienti forniti in input ed anche le ricette a cui mancava un solo ingredienti di quelli a disposizione. Il problema era troppo troppo lento, già con un dataset piccolo.
+
+Facendo un paio di ricerche sul web abbiamo compreso che il nostro era un problema facente parte del NLP, una branca dell’AI.
+Nello specifico un Probelma di Text Classification, ovvero identificare gli argomenti di un testo nel nostro caso gli ingredienti delle ricette e la loro correlazione.
+
+\textbf{Che cos’è il Word Embedding?}
+
+La semplice definizione di word embedding è la conversione di testo in numeri. Per far sì che il computer capisca il linguaggio, convertiamo il testo in forma vettoriale in modo che i computer possano sviluppare connessioni tra i vettori e le parole e capire ciò che diciamo. Con il word embedding, risolviamo i problemi relativi al Natural Language Processing.
+
+Le rappresentazioni vettoriali dei tokens, chiamate Word Embeddings, sono apprese da modelli NLP, definiti come modelli spaziali vettoriali
+
+Le singole parole sono analizzate e rappresentate atomicamente come unità singole in 
+\textbf{Bag-of-Words} (BOW): questo ‘bagaglio’ di parole, o ‘set’, sono una rappresentazione sparsa delle parole e della loro presenza, indipendentemente dall'ordine sintattico in cui appaiono in una data frase.
+
+L'idea è molto semplice: ogni documento del nostro corpus viene rappresentato contando quante volte ogni parola appare in esso.
+Ad esempio se prendiamo due ricette e quindi due liste di ingredienti(documenti) 
+
+R1 Tiramisù : "mascarpone,uova,savoiardi,zucchero,caffè,cacao”
+
+R2 Spaghetti alla Carbonara :"spaghetti,guanciale,uova,pecorino,pepe” 
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c} 
+ \hline
+ & mascarpone & uova & savoiardi & zucchero & caffè & cacao & spaghetti & guanciale & pecorino & pepe \\ [0.5ex] 
+ \hline
+R1  & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0\\
+ \hline
+R2  & 0 & 1 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1\\
+ \hline
+\end{tabular}
+\end{center}
+
+Questa viene chiamata matrice documento-caratteristica (document-feature matrix): ogni riga rappresenta un diverso documento (ricetta) e ogni colonna definisce la caratteristica usata per rappresentare il documento
+
+Nel nostro dataset abbiamo circa 560 ingredienti diversi, quindi il modello bag of word crea un'enorme matrice sparsa che memorizza i conteggi di tutte le parole nel nostro corpus (tutti i documenti, ovvero tutti gli ingredienti per ogni ricetta). Per farlo praticamente si puo utilizzare CountVectorizer della libreria scikit-learn (questa libreria la useremo spesso nel nostro discorso)
+
+Bag of Words crea solo un insieme di vettori contenente il conteggio delle occorrenze di parole nelle frasi/corpus, ma non contiene informazioni su parole importanti.
+
+Continuando nelle ricerche abbiamo trovato un altro metodo chiamato TF-IDF (term frequencies- inverse document frequency). Che ha lo scopo di riflettere quanto sia rilevante un termine in un dato documento.
+
+TF-IDF è una tecnica nell'elaborazione del linguaggio naturale per convertire le parole in vettori e con alcune informazioni semantiche e dà peso a parole non comuni, utilizzate in varie applicazioni di NLP. 
+
+Ad esempio sale , olio sono presenti in più del 60\% delle ricette quindi non sono molto rilevanti al fine di determinare la similitudine tra due ricette. TF-IDF assegnerà un valore più basso al sale.
+Per una spiegazione più precisa del funzionamento di TF-IDF vedere il seguente link \href{https://medium.datadriveninvestor.com/tf-idf-in-natural-language-processing-8db8ef4a7736}{medium.datadriveninvestor}.
+
+Per usare TF-IDF in python si utilizza TfidfVectorizer della libreria sk-learn 
+
+La libreria scikit-learn TfidfVectorizer esegue un processo di tokenizzazione dei testi per separare le parole individuali (o le frasi) nei documenti di testo e quindi costruisce una matrice di term frequency-inverse document frequency (TF-IDF) come descritto sopra
+
+La matrice TF-IDF è utilizzata per rappresentare i documenti (ricette) come un insieme di features (ingredienti) in un formato che può essere utilizzato come input per i modelli di machine learning.
+
+\begin{figure}[H]
+        \centering
+        {\includegraphics[width=0.9\textwidth]{img/img12.jpg}}
+\end{figure}
+
+max\_df non considera le parole che sono presenti più del 60\% 
+
+token\_pattern = r'[\^,]+: Questa regex matcha una qualsiasi serie di caratteri che non sia una virgola
+
+Il modello TF-IDF viene addestrato sull'intero dataset di ingredienti utilizzando il metodo fit().
+
+Il modello viene quindi utilizzato per trasformare questi ingredienti in una rappresentazione numerica utilizzando il metodo transform(). Questa rappresentazione viene chiamata "codifica TF-IDF".
+
+Per Misurare la somiglianza tra le liste degli ingredienti e gli ingredienti dati in input abbiamo utilizzato la Similarità del coseno, funzione di Sklearn con le stesse somiglianze e per i dati testuali viene utilizzata per trovare la somiglianza di testi nel documento. 
+Viene usata la funzione ottieni consigli per classificare i punteggi e generare un dataframe, tramite la libreria pandas, contente il titolo, gli ingredienti e il punteggio delle ricette consigliate.
+
+I risultati ottenuti sono accettabili ma molte volte consiglia delle ricette per niente simili.
+
+Per migliorarlo avevamo bisogno di tenere traccia degli ingredienti comunemente usati insieme. 
+
+IL nostro problema era: Come facciamo a far comprendere all’agente intelligente che alcuni ingredienti stanno bene insieme dato che sono presenti delle ricette nel dataset in cui compaio gruppi di ingredienti insieme?
+Per fare questo abbiamo addrestrato un modello chiamtao Word2vec
+
+Per fare ciò abbiamo utilizzato Word2Vec in quanto è  altamente efficiente nel raggruppare insieme parole simili.
+
+Per esempio i pomodori sono simili ad altri ingredienti usati spesso insieme. 
+
+\begin{figure}[H]
+        \centering
+        {\includegraphics[width=0.9\textwidth]{img/img13.jpg}}
+\end{figure}
+
+Word2vec è una semplice rete neurale artificiale a due strati progettata per elaborare il linguaggio naturale, l'algoritmo richiede in ingresso un corpus e restituisce un insieme di vettori che rappresentano la distribuzione semantica delle parole nel testo.
+
+Per addestrare il modello, lo strato di input includerà il numero di neuroni pari alle parole del vocabolario. La dimensione dello strato di uscita e dello strato di ingresso rimane la stessa. Tuttavia, la dimensione dello strato nascosto è impostata in base ai vettori delle dimensioni delle parole risultanti. È possibile eseguire l’incorporazione di parole con Word2Vec attraverso due metodi. In entrambi i metodi sono necessarie reti neurali artificiali. Questi metodi sono:
+
+CBOW o Common Bag of Words e Skim Gram
+
+Nel nostro caso abbiamo usato CBOW
+
+Ci sono due modi in cui Word2Vec può essere addestrato: quello esposto — dove un vettore di parole è usato per predire un contesto target — che è detto metodo skip-gram; il secondo invece è denominato metodo “Continuous Bag of Words” (CBOW), il quale utilizza il contesto per predire una parola target basata su una sequenza contigua di n-grammi.
+
+Per realizzarlo in python abbiamo usato la libreria gensim e seguito alcune guide online come questa: \href{http://nadbordrozd.github.io/blog/2016/05/20/text-classification-with-word2vec/}{guida}.
+
+Dovevamo rappresentare ogni documento corpus (lista di ingredienti per ricetta) come un singolo incorporamento in modo tale da calcolare le somiglianze.
+
+Di seguito il codice per allenare il modello Word2Vec
+
+\begin{figure}[H]
+        \centering
+        {\includegraphics[width=0.9\textwidth]{img/img14.jpg}}
+\end{figure}
+
+\begin{itemize}
+	\item Vector\_size= n, permette di decidere la dimensione dei vettori che l'algoritmo andrà a creare.
+	\item window= n, permette di decidere la massima distanza tra la parola corrente e quella predetta all'interno di una frase. Nel nostro caso è dato dalla media di ingredienti in una ricetta (9)
+	\item min\_count=n, utile per capire se una determinata ricetta piace agli utenti o meno (non verrà usata nella soluzione finale)
+	\item workers= n, permette di decidere quanti thread del processore usare per addestrare il modello.
+	\item sg= o, questo crea un modello CBOW
+ \end{itemize}
+
+Usiamo tf-idf per aggregare gli accoparment
+
+Calcoliamo la media ponderata di tutti gli incorporamenti di parole di ogni documento(lista ingredienti) e ridimensioniamo ogni vettore usando la sua frequenza inversa del documento (IDF).
+
+IDF appesantirà i termini molto comuni in un corpus (nel nostro caso parole come olio extravergine d'oliva o sale e soppeserà i termini rari.
+
+Questo sarà vantaggioso per noi perché ci conferirà una maggiore capacità di separare le ricette, poiché gli ingredienti che verranno modificati saranno quelli che l'utente tenderà a non fornire come input al sistema di consiglio.
+
+Word2Vec cerca di prevedere le parole in base all'ambiente circostante, quindi era fondamentale ordinare gli ingredienti in ordine alfabetico
+
+\begin{figure}[H]
+        \centering
+        {\includegraphics[width=0.9\textwidth]{img/img15.jpg}}
+\end{figure}
+
+Abbiamo poi utilizzato sia la similarità del coseno si a knn per trovare le ricette simili.
+
+La somiglianza del coseno : 
+
+\begin{figure}[H]
+        \centering
+        {\includegraphics[width=0.9\textwidth]{img/img16.jpg}}
+\end{figure}
+Abbiamo testato il funziomento anche con  KNN.
+Il K-Nearest Neighbors (KNN) è un algoritmo di classificazione o regressione che prende in considerazione i K oggetti più vicini in un insieme di dati per prevedere la classe o la quantità prevista
+
+In questo caso abbiamo usato KNN per trovare le ricette più vicine rispetto a agli ingredienti che l'utente ha fornito. Per fare questo, prima abbiamo convertito i nomi degli ingredienti in vettori utilizzando un modello di embedding. Questi vettori hanno una rappresentazione in uno spazio a più dimensioni che rappresenta la somiglianza semantica degli ingredienti.
+
+Successivamente, abbiamo calcolato la distanza tra il vettore di embedding della ricetta dell'utente e il vettore di embedding di ogni ricetta nella nostra base di dati utilizzando la distanza Euclidea. Infine, abbiamo selezionato le K ricette più vicine (dove K è un parametro che possiamo impostare) e abbiamo restituito i nomi di queste ricette come raccomandazioni, usando la funzione get\_recommendations.
+
+In sintesi, KNN è stato utilizzato per trovare le ricette più simili a quella fornita dall'utente utilizzando la distanza Euclidea tra i vettori di embedding degli ingredienti.
+
+Metriche valutazione KNN:
+
+\begin{figure}[H]
+        \centering
+        {\includegraphics[width=0.9\textwidth]{img/img21.jpg}}
+\end{figure}
+
+\begin{figure}[H]
+        \centering
+        {\includegraphics[width=0.9\textwidth]{img/img17.jpg}}
+\end{figure}
+
+KNN: input: "farina,uova,grana padano,pangrattato"
+
+\begin{figure}[H]
+        \centering
+        {\includegraphics[width=0.9\textwidth]{img/img18.jpg}}
+\end{figure}
+
+COS\_SIM: input "farina,uova,grana padano,pangrattato"
+
+\begin{figure}[H]
+        \centering
+        {\includegraphics[width=0.9\textwidth]{img/img19.jpg}}
+\end{figure}
+
+\chapter{GUI}
+Per creare l’interfaccia grafica dell’applicazione abbiamo usato la libreria customtkinter di python chepermette di crare una gui semplice e minimale. Inoltre è possibile non solo inserire una serie di ingredienti che abbiamo , ma anche selezionare a video delle ricette che ci piacciono per farci consigliare altre ricette simili. 
+\section{Input Vocale}   
+\begin{figure}[H]
+        \centering
+        {\includegraphics[width=0.9\textwidth]{img/img20.jpg}}
+\end{figure}
+
+Questo codice è una funzione chiamata "get\_audio\_input" che utilizza la libreria "SpeechRecognition" (sr) per riconoscere la voce dell'utente e tradurla in testo. La funzione utilizza un microfono come fonte di input audio e chiede all'utente di elencare gli ingredienti che ha a disposizione. Quando l'utente inizia a parlare, il codice registra l'audio e lo passa al metodo "recognize\_google" dell'oggetto "Recognizer" per ottenere la traduzione in testo. Il risultato viene salvato come stringa in "ingredients". Successivamente, la stringa viene divisa in una lista di parole utilizzando il metodo "split" e la lista viene successivamente trasformata in una stringa separata da virgole utilizzando il metodo "join". Infine, il testo viene inserito nella casella di testo visualizzata sull'interfaccia utente.
+
+Riferimenti Word2Vec  : \href{http://nadbordrozd.github.io/blog/2016/05/20/text-classification-with-word2vec/}{link}.
+
+NLP: \href{https://towardsdatascience.com/nlp-performance-of-different-word-embeddings-on-text-classification-de648c6262b}{link} , \href{https://github.com/TomLin/Playground/blob/master/04-Model-Comparison-Word2vec-Doc2vec-TfIdfWeighted.ipynb}{link} , 
+\href{https://towardsdatascience.com/an-introduction-to-word2vec-in-nlp-854e1c288894}{link}.
+
+Web Scraping : \href{https://realpython.com/beautiful-soup-web-scraper-python/}{link}.
+
+Libreria python : \href{ https://github.com/hhursev/recipe-scrapers}{link}.
 \end{document}
