@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.22)  11 FEB 2023 13:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.22)  12 FEB 2023 16:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -756,133 +756,149 @@ Chapter 2.
 
 ]
 Chapter 3.
-<img/img1.jpg, id=88, 335.2525pt x 235.37938pt>
+<img/img1.jpg, id=89, 335.2525pt x 235.37938pt>
 File: img/img1.jpg Graphic file (type jpg)
 <use img/img1.jpg>
-Package pdftex.def Info: img/img1.jpg  used on input line 56.
+Package pdftex.def Info: img/img1.jpg  used on input line 60.
 (pdftex.def)             Requested size: 409.76732pt x 287.69397pt.
-<img/img2.jpg, id=89, 407.6685pt x 165.564pt>
+<img/img2.jpg, id=90, 407.6685pt x 165.564pt>
 File: img/img2.jpg Graphic file (type jpg)
 <use img/img2.jpg>
-Package pdftex.def Info: img/img2.jpg  used on input line 61.
+Package pdftex.def Info: img/img2.jpg  used on input line 65.
 (pdftex.def)             Requested size: 409.76732pt x 166.41998pt.
 [4
 
  <./img/img1.jpg>]
-<img/img3.jpg, id=95, 381.425pt x 237.38687pt>
+<img/img3.jpg, id=96, 381.425pt x 237.38687pt>
 File: img/img3.jpg Graphic file (type jpg)
 <use img/img3.jpg>
-Package pdftex.def Info: img/img3.jpg  used on input line 66.
+Package pdftex.def Info: img/img3.jpg  used on input line 70.
 (pdftex.def)             Requested size: 409.76732pt x 255.0374pt.
  [5 <./img/img2.jpg> <./img/img3.jpg>]
-<img/img4.jpg, id=102, 337.76187pt x 99.87312pt>
+<img/img4.jpg, id=103, 337.76187pt x 99.87312pt>
 File: img/img4.jpg Graphic file (type jpg)
 <use img/img4.jpg>
-Package pdftex.def Info: img/img4.jpg  used on input line 99.
+Package pdftex.def Info: img/img4.jpg  used on input line 103.
 (pdftex.def)             Requested size: 409.76732pt x 121.1684pt.
-<img/img5.jpg, id=104, 239.89626pt x 149.55875pt>
+<img/img5.jpg, id=105, 239.89626pt x 149.55875pt>
 File: img/img5.jpg Graphic file (type jpg)
 <use img/img5.jpg>
-Package pdftex.def Info: img/img5.jpg  used on input line 107.
+Package pdftex.def Info: img/img5.jpg  used on input line 111.
 (pdftex.def)             Requested size: 409.76732pt x 255.48338pt.
  [6 <./img/img4.jpg>]
-Overfull \hbox (386.83087pt too wide) in paragraph at lines 114--125
- [] 
+Overfull \hbox (0.87923pt too wide) in paragraph at lines 128--128
+[]\OT1/cmr/m/n/12 Tiramis^^Ru| 
  []
 
-<img/img6.jpg, id=112, 222.33063pt x 146.04562pt>
+
+Overfull \hbox (3.42503pt too wide) in paragraph at lines 128--128
+[]\OT1/cmr/m/n/12 Spaghetti
+ []
+
+
+Overfull \hbox (5.70973pt too wide) in paragraph at lines 128--128
+[]\OT1/cmr/m/n/12 carbonara| 
+ []
+
+
+Overfull \hbox (1.0782pt too wide) in paragraph at lines 128--128
+[]\OT1/cmr/m/n/12 spaghetti,guanciale, 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+[]\OT1/cmr/m/n/12 Per preparare gli
+ []
+
+<img/img6.jpg, id=113, 222.33063pt x 146.04562pt>
 File: img/img6.jpg Graphic file (type jpg)
 <use img/img6.jpg>
-Package pdftex.def Info: img/img6.jpg  used on input line 132.
+Package pdftex.def Info: img/img6.jpg  used on input line 136.
 (pdftex.def)             Requested size: 182.11726pt x 119.6289pt.
-<img/img7.jpg, id=113, 220.32312pt x 132.99687pt>
+<img/img7.jpg, id=114, 220.32312pt x 132.99687pt>
 File: img/img7.jpg Graphic file (type jpg)
 <use img/img7.jpg>
-Package pdftex.def Info: img/img7.jpg  used on input line 135.
+Package pdftex.def Info: img/img7.jpg  used on input line 139.
 (pdftex.def)             Requested size: 182.11726pt x 109.93887pt.
-<img/img8.jpg, id=114, 317.0025pt x 157.68pt>
+<img/img8.jpg, id=115, 317.0025pt x 157.68pt>
 File: img/img8.jpg Graphic file (type jpg)
 <use img/img8.jpg>
-Package pdftex.def Info: img/img8.jpg  used on input line 144.
+Package pdftex.def Info: img/img8.jpg  used on input line 148.
 (pdftex.def)             Requested size: 182.11726pt x 90.58588pt.
-<img/img9.jpg, id=115, 154.5775pt x 116.93687pt>
+<img/img9.jpg, id=116, 154.5775pt x 116.93687pt>
 File: img/img9.jpg Graphic file (type jpg)
 <use img/img9.jpg>
-Package pdftex.def Info: img/img9.jpg  used on input line 147.
+Package pdftex.def Info: img/img9.jpg  used on input line 151.
 (pdftex.def)             Requested size: 182.11726pt x 137.78265pt.
 [7 <./img/img5.jpg> <./img/img6.jpg> <./img/img7.jpg>] [8 <./img/img8.jpg> <./i
 mg/img9.jpg>]
 <img/img10.jpg, id=129, 394.97563pt x 82.80937pt>
 File: img/img10.jpg Graphic file (type jpg)
 <use img/img10.jpg>
-Package pdftex.def Info: img/img10.jpg  used on input line 194.
+Package pdftex.def Info: img/img10.jpg  used on input line 198.
 (pdftex.def)             Requested size: 409.76732pt x 85.91121pt.
  [9 <./img/img10.jpg>]
 <img/img11.jpg, id=135, 443.8035pt x 214.182pt>
 File: img/img11.jpg Graphic file (type jpg)
 <use img/img11.jpg>
-Package pdftex.def Info: img/img11.jpg  used on input line 204.
+Package pdftex.def Info: img/img11.jpg  used on input line 208.
 (pdftex.def)             Requested size: 409.76732pt x 197.76228pt.
 
-Overfull \hbox (11.69669pt too wide) in paragraph at lines 201--205
+Overfull \hbox (11.69669pt too wide) in paragraph at lines 205--209
 []\OT1/cmr/m/n/12 L'algoritmo ter-mina quando la lista "open[]list" ^^Re vuota 
 e resti-tu-isce la lista "best[]recipes"
  []
 
 [10 <./img/img11.jpg>]
-Overfull \hbox (78.18477pt too wide) in paragraph at lines 229--238
- [] 
- []
-
 <img/img12.jpg, id=142, 483.8075pt x 119.94812pt>
 File: img/img12.jpg Graphic file (type jpg)
 <use img/img12.jpg>
-Package pdftex.def Info: img/img12.jpg  used on input line 261.
+Package pdftex.def Info: img/img12.jpg  used on input line 265.
 (pdftex.def)             Requested size: 409.76732pt x 101.59581pt.
-[11]
+ [11]
 <img/img13.jpg, id=147, 426.09187pt x 177.66376pt>
 File: img/img13.jpg Graphic file (type jpg)
 <use img/img13.jpg>
-Package pdftex.def Info: img/img13.jpg  used on input line 288.
+Package pdftex.def Info: img/img13.jpg  used on input line 292.
 (pdftex.def)             Requested size: 409.76732pt x 170.86702pt.
  [12 <./img/img12.jpg>]
 <img/img14.jpg, id=156, 483.8075pt x 84.81688pt>
 File: img/img14.jpg Graphic file (type jpg)
 <use img/img14.jpg>
-Package pdftex.def Info: img/img14.jpg  used on input line 309.
+Package pdftex.def Info: img/img14.jpg  used on input line 313.
 (pdftex.def)             Requested size: 409.76732pt x 71.8397pt.
  [13 <./img/img13.jpg> <./img/img14.jpg>]
 <img/img15.jpg, id=166, 317.68687pt x 152.57pt>
 File: img/img15.jpg Graphic file (type jpg)
 <use img/img15.jpg>
-Package pdftex.def Info: img/img15.jpg  used on input line 332.
+Package pdftex.def Info: img/img15.jpg  used on input line 336.
 (pdftex.def)             Requested size: 409.76732pt x 196.80913pt.
 <img/img16.jpg, id=167, 483.8075pt x 315.1775pt>
 File: img/img16.jpg Graphic file (type jpg)
 <use img/img16.jpg>
-Package pdftex.def Info: img/img16.jpg  used on input line 341.
+Package pdftex.def Info: img/img16.jpg  used on input line 345.
 (pdftex.def)             Requested size: 409.76732pt x 266.95471pt.
  [14 <./img/img15.jpg>]
 <img/img21.jpg, id=174, 295.1025pt x 171.13937pt>
 File: img/img21.jpg Graphic file (type jpg)
 <use img/img21.jpg>
-Package pdftex.def Info: img/img21.jpg  used on input line 356.
+Package pdftex.def Info: img/img21.jpg  used on input line 360.
 (pdftex.def)             Requested size: 409.76732pt x 237.64276pt.
  [15 <./img/img16.jpg>]
 <img/img17.jpg, id=180, 393.97188pt x 193.72375pt>
 File: img/img17.jpg Graphic file (type jpg)
 <use img/img17.jpg>
-Package pdftex.def Info: img/img17.jpg  used on input line 361.
+Package pdftex.def Info: img/img17.jpg  used on input line 365.
 (pdftex.def)             Requested size: 409.76732pt x 201.49158pt.
 <img/img18.jpg, id=181, 393.97188pt x 120.45pt>
 File: img/img18.jpg Graphic file (type jpg)
 <use img/img18.jpg>
-Package pdftex.def Info: img/img18.jpg  used on input line 368.
+Package pdftex.def Info: img/img18.jpg  used on input line 372.
 (pdftex.def)             Requested size: 409.76732pt x 125.27972pt.
 <img/img19.jpg, id=182, 483.8075pt x 142.03062pt>
 File: img/img19.jpg Graphic file (type jpg)
 <use img/img19.jpg>
-Package pdftex.def Info: img/img19.jpg  used on input line 375.
+Package pdftex.def Info: img/img19.jpg  used on input line 379.
 (pdftex.def)             Requested size: 409.76732pt x 120.29964pt.
  [16 <./img/img21.jpg> <./img/img17.jpg> <./img/img18.jpg>] [17 <./img/img19.jp
 g>]
@@ -890,10 +906,10 @@ Chapter 4.
 <img/img20.jpg, id=196, 258.9675pt x 118.4425pt>
 File: img/img20.jpg Graphic file (type jpg)
 <use img/img20.jpg>
-Package pdftex.def Info: img/img20.jpg  used on input line 383.
+Package pdftex.def Info: img/img20.jpg  used on input line 387.
 (pdftex.def)             Requested size: 409.76732pt x 187.43347pt.
 
-Overfull \hbox (21.42297pt too wide) in paragraph at lines 386--387
+Overfull \hbox (21.42297pt too wide) in paragraph at lines 390--391
 \OT1/cmr/m/n/12 Questo codice ^^Re una fun-zione chia-mata "get[]audio[]input" 
 che uti-lizza la li-bre-ria "SpeechRecog-
  []
@@ -907,17 +923,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  22345 strings out of 476091
  415213 string characters out of 5795540
- 1861324 words of memory out of 5000000
+ 1862324 words of memory out of 5000000
  42293 multiletter control sequences out of 15000+600000
  521686 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 117i,8n,131p,846b,505s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,10n,131p,846b,505s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/tex
 live/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2022
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2022/texmf-dist/fonts/ty
 pe1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (20 pages, 1295651 bytes).
+Output written on main.pdf (20 pages, 1295791 bytes).
 PDF statistics:
  247 PDF objects out of 1000 (max. 8388607)
  187 compressed objects within 2 object streams

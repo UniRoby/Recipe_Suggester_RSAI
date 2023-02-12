@@ -35,12 +35,16 @@ Performance: Migliore ricetta in base agli ingredienti forniti
 
 Enviroment: L’ambiente nel quale il nostro agente opera è composto da tutte le ricette del dataset con i relativi: titolo, ingredienti, ratings, tempo di preparazione, istruzioni, tipologia
 L’ambiente risulta:
-Completamente osservabile: si ha accesso a tutte le informazioni di ogni ricetta
-deterministico: L'ambiente deterministico significa che l'agente sa esattamente cosa aspettarsi in base alle informazioni fornite e agli input dell'utente. In altre parole, l'agente sa che dati gli stessi input, otterrà sempre lo stesso output, l'agente sa che se gli vengono forniti gli stessi ingredienti, troverà sempre la stessa ricetta migliore nell'ambiente statico
-episodico: l'agente si trova in un singolo episodio in cui riceve gli ingredienti in input e restituisce la migliore ricetta come output, senza alcuna interazione ulteriore con il mondo esterno.
-Statico: L’insieme delle ricette e le relative informazioni non cambiano nel corso del tempo
-Discreto: L’agente ha a disposizione un numero limitato di azioni
+\begin{itemize}
+\item Completamente osservabile: si ha accesso a tutte le informazioni di ogni ricetta
+\item Deterministico: L'ambiente deterministico significa che l'agente sa esattamente cosa aspettarsi in base alle informazioni fornite e agli input dell'utente. In altre parole, l'agente sa che dati gli stessi input, otterrà sempre lo stesso output, l'agente sa che se gli vengono forniti gli stessi ingredienti, troverà sempre la stessa ricetta migliore nell'ambiente statico
+\item Episodico: l'agente si trova in un singolo episodio in cui riceve gli ingredienti in input e restituisce la migliore ricetta come output, senza alcuna interazione ulteriore con il mondo esterno.
+\item Statico: L’insieme delle ricette e le relative informazioni non cambiano nel corso del tempo
+\item Discreto: L’agente ha a disposizione un numero limitato di azioni
+ \end{itemize}
+
 Attuatori: L'algoritmo utilizzato per generare le possibili soluzioni e selezionare la migliore. 
+
 Sensori: Gli input dell'utente, ovvero la lista degli ingredienti.
 
 Singolo Agente: è presente solo un agente che opera nell’ambiente
@@ -111,17 +115,17 @@ La fase di pulizia del dataset però non finiva qui. Abbiamo creato un programma
 Esempio prime righe…
 
 \begin{center}
-\begin{tabular}{|c|c|c|c|c|c|} 
+\resizebox{\columnwidth}{!}{\begin{tabular}{|p{0.1\linewidth}|p{0.22\linewidth}|c|c|c|p{0.25\linewidth}|} 
  \hline
  Titolo & Ingredienti & tempo & Valutazione & Tipologia & Istruzioni \\ [0.5ex] 
  \hline
-Tiramisù  & mascarpone,uova,savoiardi,zucchero,caffè,cacao & 46 & 4.2 & Dolci & Per preparare il tiramisù preparate il caffé c... \\
+Tiramisù  & mascarpone,uova,\par savoiardi,zucchero,\par caffè,cacao & 46 & 4.2 & Dolci & Per preparare il \par tiramisù preparate il caffé... \\
  \hline
-Spaghetti alla carbonara & spaghetti,guanciale,uova,pecorino,pepe & 25 & 4.2 & Primi piatti  & Per preparare gli spaghetti alla carbonara com...  \\
+Spaghetti alla\par carbonara & spaghetti,guanciale,\par uova,pecorino,pepe & 25 & 4.2 & Primi piatti  & Per preparare gli spaghetti alla\par carbonara...  \\
 \hline
 \multicolumn{6}{|c|}{ecc...} \\
  \hline
-\end{tabular}
+\end{tabular}}
 \end{center}
 
 Conteggio ingredienti è stato fatto sia con la libreria nltk sia con la libreria csv leggendo le righe: 
@@ -226,7 +230,7 @@ R1 Tiramisù : "mascarpone,uova,savoiardi,zucchero,caffè,cacao”
 R2 Spaghetti alla Carbonara :"spaghetti,guanciale,uova,pecorino,pepe” 
 
 \begin{center}
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c} 
+\resizebox{\columnwidth}{!}{\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|} 
  \hline
  & mascarpone & uova & savoiardi & zucchero & caffè & cacao & spaghetti & guanciale & pecorino & pepe \\ [0.5ex] 
  \hline
@@ -234,7 +238,7 @@ R1  & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0\\
  \hline
 R2  & 0 & 1 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1\\
  \hline
-\end{tabular}
+\end{tabular}}
 \end{center}
 
 Questa viene chiamata matrice documento-caratteristica (document-feature matrix): ogni riga rappresenta un diverso documento (ricetta) e ogni colonna definisce la caratteristica usata per rappresentare il documento
