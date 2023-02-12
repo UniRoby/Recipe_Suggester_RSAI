@@ -346,7 +346,7 @@ def show_selected():
         if var.get() == 1:
             selected.append(checkboxes[i].cget("text")+ " indx dataset: "+str(numbers[i]))
             print(selected)
-            search(numbers[i],"",scelta)
+            start_search(numbers[i],"",scelta)
 
     buttons_frame.pack_forget()
     
@@ -356,7 +356,7 @@ def show_selected():
 
     if input_text.get() !='':
         ingredients = input_text.get()
-        search(-1,ingredients,0)
+        start_search(-1,ingredients,0)
         
 
 
