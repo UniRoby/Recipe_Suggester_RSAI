@@ -3,7 +3,7 @@ import tkinter
 import tkinter as tk
 from tkinter import messagebox
 import speech_recognition as sr
-
+from sklearn.cluster import KMeans
 import numpy as np
 import pandas as pd
 from gensim.models import Word2Vec
