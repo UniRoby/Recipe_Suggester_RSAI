@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.22)  12 FEB 2023 19:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.22)  12 FEB 2023 19:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -914,14 +914,14 @@ File: img/img18.jpg Graphic file (type jpg)
 <use img/img18.jpg>
 Package pdftex.def Info: img/img18.jpg  used on input line 408.
 (pdftex.def)             Requested size: 409.76732pt x 125.27972pt.
-<img/img19.jpg, id=161, 483.8075pt x 142.03062pt>
+<img/img19.jpg, id=161, 464.23438pt x 146.04562pt>
 File: img/img19.jpg Graphic file (type jpg)
 <use img/img19.jpg>
 Package pdftex.def Info: img/img19.jpg  used on input line 415.
-(pdftex.def)             Requested size: 409.76732pt x 120.29964pt.
+(pdftex.def)             Requested size: 409.76732pt x 128.91273pt.
  [20 <./img/img17.jpg> <./img/img18.jpg> <./img/img19.jpg>]
 Chapter 7.
-<img/img22.jpg, id=170, 287.766pt x 208.926pt>
+<img/img22.jpg, id=169, 287.766pt x 208.926pt>
 File: img/img22.jpg Graphic file (type jpg)
 <use img/img22.jpg>
 Package pdftex.def Info: img/img22.jpg  used on input line 441.
@@ -929,46 +929,46 @@ Package pdftex.def Info: img/img22.jpg  used on input line 441.
 [21
 
 ]
-<img/img23.jpg, id=177, 263.457pt x 239.148pt>
+<img/img23.jpg, id=176, 263.457pt x 239.148pt>
 File: img/img23.jpg Graphic file (type jpg)
 <use img/img23.jpg>
 Package pdftex.def Info: img/img23.jpg  used on input line 448.
 (pdftex.def)             Requested size: 318.7087pt x 289.31886pt.
-<img/img24.jpg, id=178, 306.14375pt x 147.55125pt>
+<img/img24.jpg, id=177, 306.14375pt x 147.55125pt>
 File: img/img24.jpg Graphic file (type jpg)
 <use img/img24.jpg>
 Package pdftex.def Info: img/img24.jpg  used on input line 454.
 (pdftex.def)             Requested size: 318.7087pt x 153.61401pt.
  [22 <./img/img22.jpg> <./img/img23.jpg>]
-<img/img28.jpg, id=186, 411.03563pt x 14.0525pt>
+<img/img28.jpg, id=185, 411.03563pt x 14.0525pt>
 File: img/img28.jpg Graphic file (type jpg)
 <use img/img28.jpg>
 Package pdftex.def Info: img/img28.jpg  used on input line 461.
 (pdftex.def)             Requested size: 318.7087pt x 10.89592pt.
-<img/img25.jpg, id=187, 282.55562pt x 240.39813pt>
+<img/img25.jpg, id=186, 282.55562pt x 240.39813pt>
 File: img/img25.jpg Graphic file (type jpg)
 <use img/img25.jpg>
 Package pdftex.def Info: img/img25.jpg  used on input line 470.
 (pdftex.def)             Requested size: 318.7087pt x 271.17719pt.
-<img/img26.jpg, id=188, 359.3425pt x 327.2225pt>
+<img/img26.jpg, id=187, 359.3425pt x 327.2225pt>
 File: img/img26.jpg Graphic file (type jpg)
 <use img/img26.jpg>
 Package pdftex.def Info: img/img26.jpg  used on input line 479.
 (pdftex.def)             Requested size: 318.7087pt x 290.24348pt.
  [23 <./img/img24.jpg> <./img/img28.jpg> <./img/img25.jpg>]
-<img/img27.jpg, id=197, 319.1925pt x 147.55125pt>
+<img/img27.jpg, id=196, 319.1925pt x 147.55125pt>
 File: img/img27.jpg Graphic file (type jpg)
 <use img/img27.jpg>
 Package pdftex.def Info: img/img27.jpg  used on input line 486.
 (pdftex.def)             Requested size: 318.7087pt x 147.32797pt.
-<img/img29.jpg, id=198, 400.99812pt x 13.55063pt>
+<img/img29.jpg, id=197, 400.99812pt x 13.55063pt>
 File: img/img29.jpg Graphic file (type jpg)
 <use img/img29.jpg>
 Package pdftex.def Info: img/img29.jpg  used on input line 493.
 (pdftex.def)             Requested size: 318.7087pt x 10.77061pt.
  [24 <./img/img26.jpg> <./img/img27.jpg> <./img/img29.jpg>]
 Chapter 8.
-<img/img20.jpg, id=207, 258.9675pt x 118.4425pt>
+<img/img20.jpg, id=206, 258.9675pt x 118.4425pt>
 File: img/img20.jpg Graphic file (type jpg)
 <use img/img20.jpg>
 Package pdftex.def Info: img/img20.jpg  used on input line 504.
@@ -1007,9 +1007,9 @@ Here is how much of TeX's memory you used:
 live/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2022
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dis
 t/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (27 pages, 1952986 bytes).
+Output written on main.pdf (27 pages, 1926884 bytes).
 PDF statistics:
- 261 PDF objects out of 1000 (max. 8388607)
+ 260 PDF objects out of 1000 (max. 8388607)
  185 compressed objects within 2 object streams
  80 named destinations out of 1000 (max. 500000)
  163 words of extra memory for PDF output out of 10000 (max. 10000000)
