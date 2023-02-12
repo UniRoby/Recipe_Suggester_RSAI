@@ -16,7 +16,6 @@ Sistema di raccomandazione di ricette basato su ingredienti.
 
 Il sistema utilizza il modello di Word2Vec per rappresentare gli ingredienti come vettori nel spazio semantico.
 Il codice crea una classe TfidfEmbeddingVectorizer che adatta e trasforma i documenti (liste di ingredienti) 
-
 in vettori di parole medie. La classe TfidfEmbeddingVectorizer ha il seguente funzionamento:
 
 fit: calcola l'IDF (Inverse Document Frequency) di ogni parola utilizzando TfidfVectorizer di scikit-learn.
@@ -27,7 +26,58 @@ word_average: calcola il vettore di parole medie per un singolo documento/frase.
 
 word_average_list: calcola il vettore di parole medie per più documenti.
 
+la funzione clustering  usa un algoritmo di clustering con input la cosine_similarity  tra gli ingredienti reali delle ricette e quelli dell'input
+
+la funzione fastClustering  usa un dataset con l'attributo cluster creato in un altro file per ottenere le ricette consigliate
 '''
+def clustering(n):
+    # Carica il dataset
+    global df 
+    
+    
+    # usa TF-IDF come pesi per ogni incorporamento di parole
+    tfidf = TfidfVectorizer(min_df=5, max_df=0.60,encoding='iso-8859-1',token_pattern = r'[^,]+') #Questa regex matcha una qualsiasi serie di caratteri che non sia una virgola
+    tfidf.fit(df['ingredients'])
+    tfidf_recipe = tfidf.transform(df['ingredients'])
+    
+    
+    
+    print(df["title"][n]+"   index clustering: "+str(n))
+    ingredients=df["ingredients"][n]
+    # usa il nostro modello tfidf preaddestrato per codificare i nostri ingredienti di input
+    ingredients_tfidf = tfidf.transform([ingredients])
+        
+    # calcola la similarità del coseno tra gli ingredienti reali della ricetta e quelli dell'input
+    cos_sim = map(lambda x: cosine_similarity(ingredients_tfidf, x), tfidf_recipe)
+    scores = list(cos_sim)
+
+    # Trasforma le similarità in un array numpy
+    scores = np.array(scores)
+
+    # Effettua il clustering con K-means
+    kmeans = KMeans(n_clusters=5, random_state=0,n_init=10).fit(scores.reshape(-1, 1))
+
+    #print(tfidf_recipe.shape)
+
+    # Aggiungi una colonna "cluster" al dataframe per indicare a quale cluster appartiene ogni ricetta
+    df['cluster'] = kmeans.labels_
+
+    #Stampa le ricette simili alla ricetta selezionata
+
+    similar_recipes = df[df['cluster'] == df['cluster'][n]]
+  
+    return similar_recipes[['title']][:5]
+
+def fastClustering(n):
+    # Carica il dataset
+    df_clustered = pd.read_csv("ricette6k_clustered.csv",encoding='iso-8859-1')
+    print(df['title'][n]+" index clustering S1: "+str(n))
+
+    similar_recipes = df_clustered[df_clustered['cluster'] == df_clustered['cluster'][n]]
+    #ricette simili alla ricetta selezionata
+    return similar_recipes[['title']][:6]
+
+
 class TfidfEmbeddingVectorizer(object):
     def __init__(self, word_model):
 
@@ -113,24 +163,19 @@ def get_and_sort_corpus(data):
         corpus_sorted.append(doc)
     return corpus_sorted
   
-# calculate average length of each document 
-def get_window(corpus):
-    lengths = [len(doc) for doc in corpus]
-    avg_len = float(sum(lengths)) / len(lengths)
-    return round(avg_len)
 
-# Top-N recomendations order by score
+# migliori consigli ordinati in base allo score
 def get_recommendations(N, scores):
     # load in recipe dataset 
-    df_recipes = pd.read_csv('ricette6k.csv',encoding='iso-8859-1')
-    # order the scores with and filter to get the highest N scores
+    global df
+    # oridina in basse allo score
     top = sorted(range(len(scores)), key=lambda i: scores[i], reverse=True)[:N]
     # crea un dataframe per caricarci le raccomandazioni
     recommendation = pd.DataFrame(columns = ['ricetta', 'ingredienti', 'score'])
     count = 0
     for i in top:
-        recommendation.at[count, 'ricetta'] = df_recipes['title'][i]
-        recommendation.at[count, 'ingredienti'] = df_recipes['ingredients'][i]
+        recommendation.at[count, 'ricetta'] = df['title'][i]
+        recommendation.at[count, 'ingredienti'] = df['ingredients'][i]
         recommendation.at[count, 'score'] = "{:.3f}".format(float(scores[i]))
         count += 1
     return recommendation
@@ -138,14 +183,12 @@ def get_recommendations(N, scores):
 def get_recs(ingredients, N=5, mean=False):
     # carica modelo word2vec
     model = Word2Vec.load("model_cbow.bin")
-
-    #if model:
-        #print("Modello caricato correttamente")
+	
     # carica in data
-    data = pd.read_csv('ricette6k.csv',encoding='iso-8859-1')
-    
-    # create corpus
-    corpus = get_and_sort_corpus(data)
+    global df
+   
+    # crea corpus
+    corpus = get_and_sort_corpus(df)
 
     # usa TF-IDF come pesi per ogni incorporamento di parole
     tfidf_vec_tr = TfidfEmbeddingVectorizer(model)
@@ -154,13 +197,10 @@ def get_recs(ingredients, N=5, mean=False):
     doc_vec = [doc.reshape(1, -1) for doc in doc_vec]
     assert len(doc_vec) == len(corpus)
 
-
     input = ingredients
-
     input = input.split(",")
 
     input_embedding = tfidf_vec_tr.transform([input])[0].reshape(1, -1)
-
     # ottieni la similarità del coseno tra input embedding e tutti gli embeddings del documento
     cos_sim = map(lambda x: cosine_similarity(input_embedding, x)[0][0], doc_vec)
     scores = list(cos_sim)
@@ -168,11 +208,10 @@ def get_recs(ingredients, N=5, mean=False):
     recommendations = get_recommendations(N, scores)
     return recommendations
 
-def start_search(n,input_ingredients):
+def start_search(n,input_ingredients,scelta):
         
-        df = pd.read_csv('ricette6k.csv',encoding='iso-8859-1')
+        global df
 
-        
         if input_ingredients !="":
             ingredients=input_ingredients
 
@@ -188,14 +227,27 @@ def start_search(n,input_ingredients):
 
             
 
-        recs = get_recs(ingredients)
-            
-        i=1
-        while i<len(recs):
+        if scelta==0:
+            recs = get_recs(ingredients)  
+            i=1
+            while i<len(recs):
 
-            result_text.insert(tk.END, "\n---"+recs.ricetta[i])
-            i+=1
-
+                result_text.insert(tk.END, "\n---"+recs.ricetta[i])
+                i+=1
+        elif scelta==1:
+            recs=clustering(n)
+            i=0
+            for recipe in recs['title']:
+                if i>0:
+                    result_text.insert(tk.END, "\n---"+recipe)
+                i+=1
+        else:
+            recs=fastClustering(n)
+            i=0
+            for recipe in recs['title']:
+                if i>0:
+                    result_text.insert(tk.END, "\n---"+recipe)
+                i+=1
 
 
 def on_closing():
@@ -214,31 +266,6 @@ def get_audio_input():
     ingredients_string=",".join(ingredients_list)
     input_text.delete(0,tk.END)
     input_text.insert(0,ingredients_string)
-
-
-class Recipe:
-    def __init__(self,title, ingredients):
-        self.id = id
-        self.title = title
-        self.ingredients = ingredients
-
-
-def getRecipes():
-    data = pd.read_csv("ricette6k.csv",encoding='iso-8859-1')
-    # carica le ricette dal dataset
-    recipes= []
-    for index, row in data.iterrows():
-        
-        
-        ingredientArray = []
-        for ingredient in row[1].split(","):
-            ingredient=ingredient.strip()
-            ingredientArray.append(ingredient)
-        
-        recipe = Recipe(row["title"],ingredientArray)
-        recipes.append(recipe)
-    return recipes
-
 
 
 ctk.set_appearance_mode("System")  # Modes: "System" (standard), "Dark", "Light"
@@ -296,6 +323,14 @@ def new_recipes():
 
 def show_selected():
     sidebar_button_1.grid_remove()
+    scelta=radio_var.get()
+    if scelta==0:
+        print("Scelta: Word2Vec")
+    elif scelta==1:
+        print("Scelta: K-Means")
+    else:
+        print("Scelta: K-Means Strategy 1")
+	
     global vars
     global checkboxes
     global numbers
@@ -310,8 +345,8 @@ def show_selected():
         result=""
         if var.get() == 1:
             selected.append(checkboxes[i].cget("text")+ " indx dataset: "+str(numbers[i]))
-            
-            start_search(numbers[i],"")
+            print(selected)
+            search(numbers[i],"",scelta)
 
     buttons_frame.pack_forget()
     
@@ -321,7 +356,7 @@ def show_selected():
 
     if input_text.get() !='':
         ingredients = input_text.get()
-        start_search(-1,ingredients)
+        search(-1,ingredients,0)
         
 
 
@@ -350,6 +385,9 @@ buttons_frame.pack(pady=10,padx=10,fill="both",expand=True,side="top")
 
 result_text = ctk.CTkTextbox(root, state='disabled')
 df = pd.read_csv('ricette6k.csv',encoding='iso-8859-1')
+df.dropna(subset=['ingredients'], inplace=True)
+df.reset_index(drop=True, inplace=True)
+df['ingredients'] = df.ingredients.values.astype('U')
 
 vars = []
 checkboxes = []
@@ -382,6 +420,16 @@ scaling_label.grid(row=7, column=0, padx=20, pady=(10, 0))
 scaling_optionemenu = ctk.CTkOptionMenu(sidebar_frame, values=["80%", "90%", "100%", "110%", "120%"],
                                                                command=change_scaling_event)
 scaling_optionemenu.grid(row=8, column=0, padx=20, pady=(10, 20))
+
+radio_var = tkinter.IntVar(value=0)
+label_radio_group = ctk.CTkLabel(master=sidebar_frame, text="Scelta:")
+label_radio_group.grid(row=9, column=0, columnspan=1, padx=10, pady=10, sticky="")
+radio_button_1 = ctk.CTkRadioButton(master=sidebar_frame, variable=radio_var, value=0, text="Word2Vec")
+radio_button_1.grid(row=10, column=0, pady=10, padx=20, sticky="s")
+radio_button_2 = ctk.CTkRadioButton(master=sidebar_frame, variable=radio_var, value=1,text="K-means Strategy2")
+radio_button_2.grid(row=11, column=0, pady=10, padx=20, sticky="s")
+radio_button_3 = ctk.CTkRadioButton(master=sidebar_frame, variable=radio_var, value=2,text="K-means strategy1")
+radio_button_3.grid(row=12, column=0, pady=10, padx=20, sticky="s")
 
 input_text = ctk.CTkEntry(input_frame, placeholder_text="Inserisci Ingredienti",font=("Helvetica", 14))
 input_text.grid(row=0,column=0,pady=10, padx=10,columnspan=2,sticky='nsew')
