@@ -30,7 +30,7 @@ tfidf = TfidfVectorizer(min_df=5, max_df=0.60,encoding='iso-8859-1',token_patter
 tfidf.fit(df['ingredients'])
 tfidf_recipe = tfidf.transform(df['ingredients'])
 
-selected_recipe_index = 15
+selected_recipe_index = 2
 
 
 ingredients=df.iloc[selected_recipe_index]["ingredients"]
@@ -77,8 +77,10 @@ print("Il Silhouette Coefficient è: ", silhouette_avg)
 print("La ricetta selezionata è: ", df.iloc[selected_recipe_index]['title'])
 similar_recipes = df[df['cluster'] == df.iloc[selected_recipe_index]['cluster']]
 print("Le ricette simili sono:")
-print(similar_recipes[['title', 'cluster']][:10])
+selected_recipes=similar_recipes[['title', 'cluster']][:10]
 
+for recipe in selected_recipes['title']:
+    print(recipe)
 
 
 
