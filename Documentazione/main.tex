@@ -10,6 +10,7 @@
 \usepackage{subcaption}
 \usepackage{hyperref}
 \usepackage{float}
+\usepackage[english]{babel}
 \geometry{margin=1.1in}
 \begin{document}
 \begin{titlepage}
@@ -47,11 +48,10 @@ Il nostro progetto ha lo scopo di creare un agente intelligente capace di consig
 \chapter{PEAS}
 \section{Specifiche}
 La prima cosa da fare quando si progetta un agente intelligente è la definizione delle Specifiche Peas
-
-\textbf{Performance:} Migliore ricetta in base agli ingredienti forniti
-
-\textbf{Enviroment:} L’ambiente nel quale il nostro agente opera è composto da tutte le ricette del dataset con i relativi: titolo, ingredienti, ratings, tempo di preparazione, istruzioni, tipologia.
-
+\begin{enumerate}
+\item \textbf{Performance:} Migliore ricetta in base agli ingredienti forniti
+\item \textbf{Enviroment:} L’ambiente nel quale il nostro agente opera è composto da tutte le ricette del dataset con i relativi: titolo, ingredienti, ratings, tempo di preparazione, istruzioni, tipologia.
+ \end{enumerate}
 L’ambiente risulta:
 \begin{itemize}
 \item \textbf{Completamente osservabile:} si ha accesso a tutte le informazioni di ogni ricetta
@@ -92,6 +92,7 @@ Poi tutte le ricette sono state salvate in un file csv
 
 \section{Data Understanding, Data Preparation \& Data Cleaning}
 Abbiamo creato un programma per l’esplorazione del dataset in modo tale da effettuare il conteggio delle ricette, del tempo medio per la preparazione , del numero di ricette per tipologia, del numero di ingredienti totali, del numero di ingredienti più usati, di quelli meno usati, del conteggio per ogni singolo ingrediente. 
+
 Un primo problema si è presentato con la lista degli ingredienti. Se prediamo ad esempio la ricetta “Tiramisù” i suoi ingredienti sono: 
 
 \textbf{Mascarpone} 750 g
@@ -186,10 +187,7 @@ Come già detto , il dataset delle ricette è stato creato e quindi di seguito v
  \end{itemize}
 
 \chapter{Prima Soluzione : Algoritmi genetici}
-
-Abbiamo pensato di creare un agente intelligente capace di suggerire delle ricette in base ad una serie di ingredienti in input.
-
-Abbiamo provato a realizzare ciò attraverso gli Algoritmi Genetici. (per il codice vedere cartella GA) (Dataset Vecchio utilizzato : id, title, ingredients, likes, prep\_time, Solo 300 ricette)
+Abbiamo provato a realizzare un agente intelligente attraverso gli Algoritmi Genetici. (per il codice vedere cartella GA) (Dataset Vecchio utilizzato : id, title, ingredients, likes, prep\_time, Solo 300 ricette)
 
 Un GA è una proceduta ad alto livello (meta-euristica) ispirata alla genetica per definire un algoritmo di ricerca. Evolve una popolazione di individui (soluzioni candidate) producendo di volta in volta soluzioni sempre migliori rispetto ad una funzione obiettivo, fino a raggiungere l’ottimo o un’altra condizione di terminazione. La creazione di nuove generazioni di individui avviene applicando degli operatori genetici, precisamente selezione, crossover e mutazione.
 
@@ -226,7 +224,7 @@ La funzione \textbf{"evaluate\_recipe"} valuta una singola ricetta in base agli 
 
 La funzione \textbf{"find\_best\_recipe"} utilizza l'algoritmo A* per trovare la migliore ricetta possibile. Inizia creando due liste: "open\_list" e "closed\_list". "open\_list" contiene tutte le ricette del dataset all'inizio, mentre "closed\_list" è vuota.
 
-La funzione \textbf{"find\_best\_recipe"} utilizza l'algoritmo A* per trovare la migliore ricetta possibile dalle ricette date in input. Inizialmente, la lista "open\_list" contiene tutte le ricette e la lista "closed\_list" è vuota. Poi, all'interno del ciclo while, l'algoritmo seleziona la ricetta con la valutazione più alta dalla lista "open\_list" e la sposta nella lista "closed\_list". Successivamente, verifica se tutti gli ingredienti della ricetta corrente sono presenti negli ingredienti forniti in input. Se lo sono, la ricetta viene aggiunta alla lista "best\_recipes".
+All'interno del ciclo while, l'algoritmo seleziona la ricetta con la valutazione più alta dalla lista "open\_list" e la sposta nella lista "closed\_list". Successivamente, verifica se tutti gli ingredienti della ricetta corrente sono presenti negli ingredienti forniti in input. Se lo sono, la ricetta viene aggiunta alla lista "best\_recipes".
 
 L'algoritmo termina quando la lista "open\_list" è vuota e restituisce la lista "best\_recipes" contentenente le migliori ricette
 \begin{figure}[H]
