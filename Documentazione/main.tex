@@ -421,9 +421,13 @@ Codice:
         {\includegraphics[width=0.9\textwidth]{img/img17.jpg}}
 \end{figure}
 
-La riga knn = NearestNeighbors(n\_neighbors=N, algorithm='ball\_tree') crea un oggetto di tipo NearestNeighbors da scikit-learn, che è una classe che implementa un algoritmo di ricerca delle vicinanze più vicine. La classe NearestNeighbors ha due parametri importanti: n\_neighbors: questo parametro specifica il numero di vicini più vicini che vogliamo trovare per ogni punto del dataset. In questo caso, n\_neighbors=N significa che stiamo cercando i N vicini più vicini.
-algorithm: questo parametro specifica l'algoritmo di ricerca delle vicinanze che si desidera utilizzare. Nel caso specifico, l'algoritmo specificato è 'ball\_tree'.
+La riga knn = NearestNeighbors(n\_neighbors=N, algorithm='ball\_tree') crea un oggetto di tipo NearestNeighbors da scikit-learn.
 
+ La classe NearestNeighbors ha due parametri importanti: 
+\begin{itemize}
+\item n\_neighbors: questo parametro specifica il numero di vicini più vicini che vogliamo trovare per ogni punto del dataset. In questo caso, n\_neighbors=N significa che stiamo cercando i N vicini più vicini.
+\item algorithm: questo parametro specifica l'algoritmo di ricerca delle vicinanze che si desidera utilizzare. Nel caso specifico, l'algoritmo specificato è 'ball\_tree'.
+\end{itemize}
 Il modello viene addestrato sulla matrice dei vettori dei documenti con il metodo fit. Infine, il metodo kneighbors viene utilizzato per ottenere le K (in questo caso, N) vicinanze più vicine tra il vettore di input e tutti i vettori dei documenti.
 
 Metriche valutazione KNN:
@@ -454,7 +458,7 @@ COS\_SIM: input "farina,uova,grana padano,pangrattato"
 Abbiamo poi ripreso la soluzione che usava sono TD-IDF e cosine\_similarity e abbiamo usato la cosine\_similarity come input per un algoritmo di clustering. Ed il risultato è stato ottimo.
 
 Per il clustering abbiamo scelto l’algoritmo K-Means uno dei più diffusi.
-Attuandodue strategie: 
+Attuando due strategie: 
 
 Nella prima stategia abbiamo calcolato la cosine\_similarity di tra tutte le ricette del dataset a priori e l'abbiamo passata in input al clustering.
 

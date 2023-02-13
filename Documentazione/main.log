@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.22)  13 FEB 2023 12:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.22)  13 FEB 2023 12:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1003,7 +1003,7 @@ File: img/img17.jpg Graphic file (type jpg)
 Package pdftex.def Info: img/img17.jpg  used on input line 421.
 (pdftex.def)             Requested size: 409.76732pt x 201.49158pt.
 
-Overfull \hbox (4.56898pt too wide) in paragraph at lines 424--426
+Overfull \hbox (4.56898pt too wide) in paragraph at lines 424--425
 []\OT1/cmr/m/n/12 La riga knn = Near-est-Neigh-bors(n[]neighbors=N, al-go-rithm
 ='ball[]tree') crea un oggetto
  []
@@ -1012,22 +1012,22 @@ Overfull \hbox (4.56898pt too wide) in paragraph at lines 424--426
 <img/img21.jpg, id=275, 295.1025pt x 171.13937pt>
 File: img/img21.jpg Graphic file (type jpg)
 <use img/img21.jpg>
-Package pdftex.def Info: img/img21.jpg  used on input line 433.
+Package pdftex.def Info: img/img21.jpg  used on input line 437.
 (pdftex.def)             Requested size: 409.76732pt x 237.64276pt.
 <img/img18.jpg, id=276, 393.97188pt x 120.45pt>
 File: img/img18.jpg Graphic file (type jpg)
 <use img/img18.jpg>
-Package pdftex.def Info: img/img18.jpg  used on input line 440.
+Package pdftex.def Info: img/img18.jpg  used on input line 444.
 (pdftex.def)             Requested size: 409.76732pt x 125.27972pt.
 <img/img19.jpg, id=277, 464.23438pt x 146.04562pt>
 File: img/img19.jpg Graphic file (type jpg)
 <use img/img19.jpg>
-Package pdftex.def Info: img/img19.jpg  used on input line 449.
+Package pdftex.def Info: img/img19.jpg  used on input line 453.
 (pdftex.def)             Requested size: 409.76732pt x 128.91273pt.
  [20 <./img/img21.jpg> <./img/img18.jpg>] [21 <./img/img19.jpg>]
 Chapter 7.
 
-Overfull \hbox (5.86536pt too wide) in paragraph at lines 461--462
+Overfull \hbox (5.86536pt too wide) in paragraph at lines 465--466
 []\OT1/cmr/m/n/12 Nel sec-onda strate-gia ab-bi-amo cre-ato il clus-ter-ing una
  volta cal-co-lato la co-sine[]similarity
  []
@@ -1035,7 +1035,7 @@ Overfull \hbox (5.86536pt too wide) in paragraph at lines 461--462
 <img/img22.jpg, id=289, 287.766pt x 208.926pt>
 File: img/img22.jpg Graphic file (type jpg)
 <use img/img22.jpg>
-Package pdftex.def Info: img/img22.jpg  used on input line 477.
+Package pdftex.def Info: img/img22.jpg  used on input line 481.
 (pdftex.def)             Requested size: 318.7087pt x 231.40051pt.
 [22
 
@@ -1043,46 +1043,46 @@ Package pdftex.def Info: img/img22.jpg  used on input line 477.
 <img/img23.jpg, id=294, 263.457pt x 239.148pt>
 File: img/img23.jpg Graphic file (type jpg)
 <use img/img23.jpg>
-Package pdftex.def Info: img/img23.jpg  used on input line 484.
+Package pdftex.def Info: img/img23.jpg  used on input line 488.
 (pdftex.def)             Requested size: 318.7087pt x 289.31886pt.
 <img/img24.jpg, id=295, 306.14375pt x 147.55125pt>
 File: img/img24.jpg Graphic file (type jpg)
 <use img/img24.jpg>
-Package pdftex.def Info: img/img24.jpg  used on input line 490.
+Package pdftex.def Info: img/img24.jpg  used on input line 494.
 (pdftex.def)             Requested size: 318.7087pt x 153.61401pt.
  [23 <./img/img22.jpg> <./img/img23.jpg>]
 <img/img28.jpg, id=303, 411.03563pt x 14.0525pt>
 File: img/img28.jpg Graphic file (type jpg)
 <use img/img28.jpg>
-Package pdftex.def Info: img/img28.jpg  used on input line 497.
+Package pdftex.def Info: img/img28.jpg  used on input line 501.
 (pdftex.def)             Requested size: 318.7087pt x 10.89592pt.
 <img/img25.jpg, id=304, 282.55562pt x 240.39813pt>
 File: img/img25.jpg Graphic file (type jpg)
 <use img/img25.jpg>
-Package pdftex.def Info: img/img25.jpg  used on input line 506.
+Package pdftex.def Info: img/img25.jpg  used on input line 510.
 (pdftex.def)             Requested size: 318.7087pt x 271.17719pt.
 <img/img26.jpg, id=305, 359.3425pt x 327.2225pt>
 File: img/img26.jpg Graphic file (type jpg)
 <use img/img26.jpg>
-Package pdftex.def Info: img/img26.jpg  used on input line 515.
+Package pdftex.def Info: img/img26.jpg  used on input line 519.
 (pdftex.def)             Requested size: 318.7087pt x 290.24348pt.
  [24 <./img/img24.jpg> <./img/img28.jpg> <./img/img25.jpg>]
 <img/img27.jpg, id=315, 319.1925pt x 147.55125pt>
 File: img/img27.jpg Graphic file (type jpg)
 <use img/img27.jpg>
-Package pdftex.def Info: img/img27.jpg  used on input line 522.
+Package pdftex.def Info: img/img27.jpg  used on input line 526.
 (pdftex.def)             Requested size: 318.7087pt x 147.32797pt.
 <img/img29.jpg, id=316, 400.99812pt x 13.55063pt>
 File: img/img29.jpg Graphic file (type jpg)
 <use img/img29.jpg>
-Package pdftex.def Info: img/img29.jpg  used on input line 529.
+Package pdftex.def Info: img/img29.jpg  used on input line 533.
 (pdftex.def)             Requested size: 318.7087pt x 10.77061pt.
  [25 <./img/img26.jpg> <./img/img27.jpg> <./img/img29.jpg>]
 Chapter 8.
 <img/img32.jpg, id=324, 964.10187pt x 565.11125pt>
 File: img/img32.jpg Graphic file (type jpg)
 <use img/img32.jpg>
-Package pdftex.def Info: img/img32.jpg  used on input line 549.
+Package pdftex.def Info: img/img32.jpg  used on input line 553.
 (pdftex.def)             Requested size: 409.76732pt x 240.18204pt.
 [26
 
@@ -1090,15 +1090,15 @@ Package pdftex.def Info: img/img32.jpg  used on input line 549.
 <img/img31.jpg, id=329, 483.8075pt x 283.0575pt>
 File: img/img31.jpg Graphic file (type jpg)
 <use img/img31.jpg>
-Package pdftex.def Info: img/img31.jpg  used on input line 554.
+Package pdftex.def Info: img/img31.jpg  used on input line 558.
 (pdftex.def)             Requested size: 409.76732pt x 239.74913pt.
 <img/img20.jpg, id=330, 258.9675pt x 118.4425pt>
 File: img/img20.jpg Graphic file (type jpg)
 <use img/img20.jpg>
-Package pdftex.def Info: img/img20.jpg  used on input line 560.
+Package pdftex.def Info: img/img20.jpg  used on input line 564.
 (pdftex.def)             Requested size: 409.76732pt x 187.43347pt.
  [27 <./img/img32.jpg> <./img/img31.jpg>]
-Overfull \hbox (21.42297pt too wide) in paragraph at lines 563--564
+Overfull \hbox (21.42297pt too wide) in paragraph at lines 567--568
 \OT1/cmr/m/n/12 Questo codice ^^Re una fun-zione chia-mata "get[]audio[]input" 
 che uti-lizza la li-bre-ria "SpeechRecog-
  []
@@ -1108,14 +1108,8 @@ Chapter 9.
 [29
 
 ] (./main.aux)
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 32116C16B822E5A123B05CC6E38F58E5;3337
-(rerunfilecheck)             After:  EAD2D7736FE8E69A395F68B997B9D1F1;3387.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: EAD2D7736FE8E69A395F68B997B9D1F1;3387.
  ) 
 Here is how much of TeX's memory you used:
  25344 strings out of 476091
@@ -1131,7 +1125,7 @@ xmf-dist/fonts/type1/public/mnsymbol/MnSymbol12.pfb><c:/texlive/2022/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2022/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public
 /cm-super/sfrm1200.pfb>
-Output written on main.pdf (30 pages, 2131259 bytes).
+Output written on main.pdf (30 pages, 2131245 bytes).
 PDF statistics:
  396 PDF objects out of 1000 (max. 8388607)
  305 compressed objects within 4 object streams
