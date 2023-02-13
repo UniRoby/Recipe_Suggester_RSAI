@@ -10,6 +10,9 @@
 \usepackage{subcaption}
 \usepackage{hyperref}
 \usepackage{float}
+\usepackage{amsmath}%
+\usepackage{MnSymbol}%
+\usepackage{wasysym}%
 \geometry{margin=1.1in}
 \begin{document}
 \begin{titlepage}
@@ -42,14 +45,18 @@
 Il progetto nasce dal problema che molte persone hanno, ovvero avere in dispensa/frigo degli ingredienti dimenticati oppure accumulati e non sanno cosa cucinare. Oppure banalmente ottenere nuove idee per delle ricette in base ad altre che ci piacciono.
 
 \section{Idea}
-Il nostro progetto ha lo scopo di creare un agente intelligente capace di consigliare una o più ricette in base a quello che l’utente ha a disposizione, o che gli piace 
+Il nostro progetto ha lo scopo di creare un agente intelligente capace di consigliare una o più ricette in base a quello che l’utente ha a disposizione, o che gli piace.
 
 \chapter{PEAS}
 \section{Specifiche}
-La prima cosa da fare quando si progetta un agente intelligente è la definizione delle Specifiche Peas
-\textbf{Performance:} Migliore ricetta in base agli ingredienti forniti
-\textbf{Enviroment:} L’ambiente nel quale il nostro agente opera è composto da tutte le ricette del dataset con i relativi: titolo, ingredienti, ratings, tempo di preparazione, istruzioni, tipologia.
+La prima cosa da fare quando si progetta un agente intelligente è la definizione delle Specifiche Peas.
+\begin{itemize}
+\item[] $\blacksquare$  \textbf{Performance:} Migliore ricetta in base agli ingredienti forniti
+
+\item[] $\blacksquare$  \textbf{Enviroment:} L’ambiente nel quale il nostro agente opera è composto da tutte le ricette del dataset con i relativi: titolo, ingredienti, ratings, tempo di preparazione, istruzioni, tipologia.
+
 L’ambiente risulta:
+
 \begin{itemize}
 \item \textbf{Completamente osservabile:} si ha accesso a tutte le informazioni di ogni ricetta
 \item \textbf{Deterministico:} L'ambiente deterministico significa che l'agente sa esattamente cosa aspettarsi in base alle informazioni fornite e agli input dell'utente. In altre parole, l'agente sa che dati gli stessi input, otterrà sempre lo stesso output, l'agente sa che se gli vengono forniti gli stessi ingredienti, troverà sempre la stessa ricetta migliore nell'ambiente statico
@@ -60,10 +67,10 @@ L’ambiente risulta:
  \end{itemize}
 
 
-\textbf{Attuatori:} L'algoritmo utilizzato per generare le possibili soluzioni e selezionare la migliore. 
+$\blacksquare$\textbf{Attuatori:} L'algoritmo utilizzato per generare le possibili soluzioni e selezionare la migliore. 
 
-\textbf{Sensori:} Gli input dell'utente, ovvero la lista degli ingredienti.
-
+$\blacksquare$\textbf{Sensori:} Gli input dell'utente, ovvero la lista degli ingredienti.
+ \end{itemize}
 
 
 \chapter{Dataset}
