@@ -497,9 +497,15 @@ Con la prima posiamo effettuare il clustering una sola volta, salvare nel datase
 Con la seconda però abbiamo raccomandazioni più precise , vedi il silhouette Coefficient
 
 \chapter{App}
-Per creare l’interfaccia grafica dell’applicazione abbiamo usato la libreria customtkinter di python chepermette di crare una gui semplice e minimale. Inoltre è possibile non solo inserire una serie di ingredienti che abbiamo , ma anche selezionare a video delle ricette che ci piacciono per farci consigliare altre ricette simili. 
+Per creare l’interfaccia grafica dell’applicazione abbiamo usato la libreria customtkinter di python che permette di crare una gui semplice e minimale. Inoltre è possibile non solo inserire una serie di ingredienti che abbiamo , ma anche selezionare a video delle ricette che ci piacciono per farci consigliare altre ricette simili. 
 \section{GUI}
- Abbiamo creato un applicazione grafica utilizzando la libreria customtkinter di python
+ Nella pagina iniziale vengono mostrate una serie di ricette che l'utente può selezionare, e per ognuna    delle quali il programma restituisce 4 ricette consigliate.
+ L'utente può anche scrivere gli ingredienti che ha disposizione nel campo di testo o dirli a voce  selezionando il bottone "mic".
+ Inoltre può selezionare con quale strategia effettuare la ricerca (Word2Vec, Clustering 1, Clustering 2)
+ 
+ Una volta che ha selezionato una ricetta e/o inserito degli ingredienti può procedere con il premere "Avvia Ricerca".
+ Se non vede nessuna ricetta che gli piace può farsene generare di nuove conil bottone "Nuove ricette" Oppure dopo che ha ottenuto dei cosigli su una ricetta può tornare alla stessa lista di ricette con il bottone "Lista ricette" per selezionarne una che aveva dimenticato.
+ 
 
 \begin{figure}[H]
         \centering
