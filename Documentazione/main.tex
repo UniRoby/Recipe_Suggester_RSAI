@@ -10,7 +10,6 @@
 \usepackage{subcaption}
 \usepackage{hyperref}
 \usepackage{float}
-\usepackage[english]{babel}
 \geometry{margin=1.1in}
 \begin{document}
 \begin{titlepage}
@@ -48,10 +47,8 @@ Il nostro progetto ha lo scopo di creare un agente intelligente capace di consig
 \chapter{PEAS}
 \section{Specifiche}
 La prima cosa da fare quando si progetta un agente intelligente è la definizione delle Specifiche Peas
-\begin{enumerate}
-\item \textbf{Performance:} Migliore ricetta in base agli ingredienti forniti
-\item \textbf{Enviroment:} L’ambiente nel quale il nostro agente opera è composto da tutte le ricette del dataset con i relativi: titolo, ingredienti, ratings, tempo di preparazione, istruzioni, tipologia.
- \end{enumerate}
+\textbf{Performance:} Migliore ricetta in base agli ingredienti forniti
+\textbf{Enviroment:} L’ambiente nel quale il nostro agente opera è composto da tutte le ricette del dataset con i relativi: titolo, ingredienti, ratings, tempo di preparazione, istruzioni, tipologia.
 L’ambiente risulta:
 \begin{itemize}
 \item \textbf{Completamente osservabile:} si ha accesso a tutte le informazioni di ogni ricetta
@@ -61,6 +58,7 @@ L’ambiente risulta:
 \item \textbf{Discreto:} L’agente ha a disposizione un numero limitato di azioni
 \item \textbf{Singolo Agente:} è presente solo un agente che opera nell’ambiente
  \end{itemize}
+
 
 \textbf{Attuatori:} L'algoritmo utilizzato per generare le possibili soluzioni e selezionare la migliore. 
 
@@ -206,6 +204,16 @@ Codifica individuo (ricetta) era formata da un array di 8 interi che potevano as
 
 Dopo varie prove e modifiche agli operatori genetici ci siamo resi conto che l’algoritmo era un po' troppo casuale. Molte volte trovava le due migliori ricette in una 50ina di generazioni altre volte arrivava fino a 500 iterazioni trovando due ricette con fitness molto basse.
 
+\begin{figure}[H]
+        \centering
+        {\includegraphics[width=0.9\textwidth]{img/img35.jpg}}
+\end{figure}
+
+\begin{figure}[H]
+        \centering
+        {\includegraphics[width=0.9\textwidth]{img/img34.jpg}}
+\end{figure}
+
 Così abbiamo pensato che la codifica non era adatta o probabilmente non era adatto al nostro problema un algoritmo Genetico.
 
 \chapter{Seconda Soluzione : Algoritmo A*}
@@ -234,7 +242,12 @@ L'algoritmo termina quando la lista "open\_list" è vuota e restituisce la lista
 
 Il programma funzionava abbastanza bene riusciva a dare in output le ricette che ottimizzavano gli ingredienti forniti in input ed anche le ricette a cui mancava un solo ingredienti di quelli a disposizione. 
 
-Il problema era che era troppo troppo lento, già con un dataset piccolo.
+\begin{figure}[H]
+        \centering
+        {\includegraphics[width=0.9\textwidth]{img/img33.jpg}}
+\end{figure}
+
+Il problema era che era troppo troppo lento, già con un dataset piccolo, inoltre, anlaizando meglio il codice ci siamo accorti che probabilmente era una semplice ricerca e non un algoritmo A Star, in quanto non utilizza h(n).
 
 \chapter{Terza Soluzione TF-IDF + similiarità del coseno}
 
@@ -519,22 +532,6 @@ Inoltre può selezionare con quale strategia effettuare la ricerca (Word2Vec, Cl
         {\includegraphics[width=0.9\textwidth]{img/img31.jpg}}
 \end{figure}
 
-
-\begin{figure}[H]
-        \centering
-        {\includegraphics[width=0.9\textwidth]{img/img33.jpg}}
-\end{figure}
-
-\begin{figure}[H]
-        \centering
-        {\includegraphics[width=0.9\textwidth]{img/img35.jpg}}
-\end{figure}
-
-\begin{figure}[H]
-        \centering
-        {\includegraphics[width=0.9\textwidth]{img/img34.jpg}}
-\end{figure}
-
 \section{Input Vocale}   
 \begin{figure}[H]
         \centering
@@ -544,10 +541,12 @@ Inoltre può selezionare con quale strategia effettuare la ricerca (Word2Vec, Cl
 Questo codice è una funzione chiamata "get\_audio\_input" che utilizza la libreria "SpeechRecognition" (sr) per riconoscere la voce dell'utente e tradurla in testo. La funzione utilizza un microfono come fonte di input audio e chiede all'utente di elencare gli ingredienti che ha a disposizione. Quando l'utente inizia a parlare, il codice registra l'audio e lo passa al metodo "recognize\_google" dell'oggetto "Recognizer" per ottenere la traduzione in testo. Il risultato viene salvato come stringa in "ingredients". Successivamente, la stringa viene divisa in una lista di parole utilizzando il metodo "split" e la lista viene successivamente trasformata in una stringa separata da virgole utilizzando il metodo "join". Infine, il testo viene inserito nella casella di testo visualizzata sull'interfaccia utente.
 
 \chapter{Riferimenti}
+
 \begin{itemize}
 \item Word2Vec  : \href{http://nadbordrozd.github.io/blog/2016/05/20/text-classification-with-word2vec/}{link}, \href{https://github.com/TomLin/Playground/blob/master/04-Model-Comparison-Word2vec-Doc2vec-TfIdfWeighted.ipynb}{link} , \href{https://towardsdatascience.com/an-introduction-to-word2vec-in-nlp-854e1c288894}{link}.
 \item NLP: \href{https://towardsdatascience.com/nlp-performance-of-different-word-embeddings-on-text-classification-de648c6262b}{link}.
 \item Web Scraping : \href{https://realpython.com/beautiful-soup-web-scraper-python/}{link}.
 \item Libreria python : \href{ https://github.com/hhursev/recipe-scrapers}{link}.
 \end{itemize}
+
 \end{document}

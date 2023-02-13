@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.22)  13 FEB 2023 11:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.22)  13 FEB 2023 11:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -630,86 +630,55 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks39
 \@floatcapt=\box65
 )
-(c:/texlive/2022/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2022/12/26 3.84 The Babel package
-\babel@savecnt=\count315
-\U@D=\dimen279
-\l@unhyphenated=\language87
-
-(c:/texlive/2022/texmf-dist/tex/generic/babel/txtbabel.def)
-\bbl@readstream=\read3
-\bbl@dirlevel=\count316
-
-(c:/texlive/2022/texmf-dist/tex/generic/babel-english/english.ldf
-Language: english 2017/06/06 v3.3r English support from the babel system
-Package babel Info: Hyphen rules for 'canadian' set to \l@english
-(babel)             (\language0). Reported on input line 102.
-Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language21). Reported on input line 105.
-Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language21). Reported on input line 108.
-))
-(c:/texlive/2022/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
-Package babel Info: Importing font and identification data for english
-(babel)             from babel-en.ini. Reported on input line 11.
-)
 (c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count317
+\l__color_backend_stack_int=\count315
 \l__pdf_internal_box=\box66
 )
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
  (c:/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count318
-\scratchdimen=\dimen280
+\scratchcounter=\count316
+\scratchdimen=\dimen279
 \scratchbox=\box67
-\nofMPsegments=\count319
-\nofMParguments=\count320
+\nofMPsegments=\count317
+\nofMParguments=\count318
 \everyMPshowfont=\toks40
-\MPscratchCnt=\count321
-\MPscratchDim=\dimen281
-\MPnumerator=\count322
-\makeMPintoPDFobject=\count323
+\MPscratchCnt=\count319
+\MPscratchDim=\dimen280
+\MPnumerator=\count320
+\makeMPintoPDFobject=\count321
 \everyMPtoPDFconversion=\toks41
 ) (c:/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-
-(c:/texlive/2022/texmf-dist/tex/latex/grfext/grfext.sty
-Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
-)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 504.
 
 (c:/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 15.
+Package hyperref Info: Link coloring OFF on input line 14.
 
 (./main.out) (./main.out)
 \@outlinefile=\write4
@@ -756,17 +725,17 @@ Package caption Info: End \AtBeginDocument code.
 <img/logo.png, id=108, 351.3125pt x 351.3125pt>
 File: img/logo.png Graphic file (type png)
 <use img/logo.png>
-Package pdftex.def Info: img/logo.png  used on input line 31.
+Package pdftex.def Info: img/logo.png  used on input line 30.
 (pdftex.def)             Requested size: 182.11726pt x 182.12068pt.
 [1
 
 {c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./img/logo.png>
 ] (./main.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
  (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
 
 (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -779,7 +748,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.41 \chapter
+l.40 \chapter
              {Introduzione} [1
 
 ]
@@ -792,251 +761,252 @@ Chapter 2.
 
 ]
 Chapter 3.
-<img/img1.jpg, id=159, 335.2525pt x 235.37938pt>
+<img/img1.jpg, id=157, 335.2525pt x 235.37938pt>
 File: img/img1.jpg Graphic file (type jpg)
 <use img/img1.jpg>
-Package pdftex.def Info: img/img1.jpg  used on input line 78.
+Package pdftex.def Info: img/img1.jpg  used on input line 76.
 (pdftex.def)             Requested size: 409.76732pt x 287.69397pt.
-<img/img2.jpg, id=160, 407.6685pt x 165.564pt>
+<img/img2.jpg, id=158, 407.6685pt x 165.564pt>
 File: img/img2.jpg Graphic file (type jpg)
 <use img/img2.jpg>
-Package pdftex.def Info: img/img2.jpg  used on input line 83.
+Package pdftex.def Info: img/img2.jpg  used on input line 81.
 (pdftex.def)             Requested size: 409.76732pt x 166.41998pt.
 [4
 
  <./img/img1.jpg>]
-<img/img3.jpg, id=167, 381.425pt x 237.38687pt>
+<img/img3.jpg, id=165, 381.425pt x 237.38687pt>
 File: img/img3.jpg Graphic file (type jpg)
 <use img/img3.jpg>
-Package pdftex.def Info: img/img3.jpg  used on input line 88.
+Package pdftex.def Info: img/img3.jpg  used on input line 86.
 (pdftex.def)             Requested size: 409.76732pt x 255.0374pt.
  [5 <./img/img2.jpg> <./img/img3.jpg>]
-<img/img4.jpg, id=174, 337.76187pt x 99.87312pt>
+<img/img4.jpg, id=172, 337.76187pt x 99.87312pt>
 File: img/img4.jpg Graphic file (type jpg)
 <use img/img4.jpg>
-Package pdftex.def Info: img/img4.jpg  used on input line 126.
+Package pdftex.def Info: img/img4.jpg  used on input line 124.
 (pdftex.def)             Requested size: 409.76732pt x 121.1684pt.
-<img/img5.jpg, id=175, 239.89626pt x 149.55875pt>
+<img/img5.jpg, id=173, 239.89626pt x 149.55875pt>
 File: img/img5.jpg Graphic file (type jpg)
 <use img/img5.jpg>
-Package pdftex.def Info: img/img5.jpg  used on input line 134.
+Package pdftex.def Info: img/img5.jpg  used on input line 132.
 (pdftex.def)             Requested size: 364.24149pt x 227.09888pt.
  [6 <./img/img4.jpg>]
-Overfull \hbox (0.87923pt too wide) in paragraph at lines 151--151
+Overfull \hbox (0.87923pt too wide) in paragraph at lines 149--149
 []\OT1/cmr/m/n/12 Tiramis^^Ru| 
  []
 
 
-Overfull \hbox (3.42503pt too wide) in paragraph at lines 151--151
+Overfull \hbox (3.42503pt too wide) in paragraph at lines 149--149
 []\OT1/cmr/m/n/12 Spaghetti
  []
 
 
-Overfull \hbox (5.70973pt too wide) in paragraph at lines 151--151
+Overfull \hbox (5.70973pt too wide) in paragraph at lines 149--149
 []\OT1/cmr/m/n/12 carbonara| 
  []
 
 
-Overfull \hbox (1.0782pt too wide) in paragraph at lines 151--151
+Overfull \hbox (1.0782pt too wide) in paragraph at lines 149--149
 []\OT1/cmr/m/n/12 spaghetti,guanciale, 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--151
+Underfull \hbox (badness 10000) in paragraph at lines 149--149
 []\OT1/cmr/m/n/12 Per preparare gli
  []
 
-<img/img6.jpg, id=183, 222.33063pt x 146.04562pt>
+<img/img6.jpg, id=181, 222.33063pt x 146.04562pt>
 File: img/img6.jpg Graphic file (type jpg)
 <use img/img6.jpg>
-Package pdftex.def Info: img/img6.jpg  used on input line 159.
+Package pdftex.def Info: img/img6.jpg  used on input line 157.
 (pdftex.def)             Requested size: 204.88365pt x 134.5842pt.
-<img/img7.jpg, id=184, 220.32312pt x 132.99687pt>
+<img/img7.jpg, id=182, 220.32312pt x 132.99687pt>
 File: img/img7.jpg Graphic file (type jpg)
 <use img/img7.jpg>
-Package pdftex.def Info: img/img7.jpg  used on input line 162.
+Package pdftex.def Info: img/img7.jpg  used on input line 160.
 (pdftex.def)             Requested size: 204.88365pt x 123.68173pt.
-<img/img8.jpg, id=185, 317.0025pt x 157.68pt>
+<img/img8.jpg, id=183, 317.0025pt x 157.68pt>
 File: img/img8.jpg Graphic file (type jpg)
 <use img/img8.jpg>
-Package pdftex.def Info: img/img8.jpg  used on input line 171.
+Package pdftex.def Info: img/img8.jpg  used on input line 169.
 (pdftex.def)             Requested size: 409.76732pt x 203.82185pt.
-<img/img9.jpg, id=186, 154.5775pt x 116.93687pt>
+<img/img9.jpg, id=184, 154.5775pt x 116.93687pt>
 File: img/img9.jpg Graphic file (type jpg)
 <use img/img9.jpg>
-Package pdftex.def Info: img/img9.jpg  used on input line 174.
+Package pdftex.def Info: img/img9.jpg  used on input line 172.
 (pdftex.def)             Requested size: 227.65005pt x 172.23056pt.
 [7 <./img/img5.jpg> <./img/img6.jpg> <./img/img7.jpg>] [8 <./img/img8.jpg> <./i
 mg/img9.jpg>] [9]
 Chapter 4.
+<img/img35.jpg, id=201, 378.41376pt x 38.1425pt>
+File: img/img35.jpg Graphic file (type jpg)
+<use img/img35.jpg>
+Package pdftex.def Info: img/img35.jpg  used on input line 209.
+(pdftex.def)             Requested size: 409.76732pt x 41.30327pt.
 [10
 
 ]
+<img/img34.jpg, id=206, 467.24562pt x 297.11pt>
+File: img/img34.jpg Graphic file (type jpg)
+<use img/img34.jpg>
+Package pdftex.def Info: img/img34.jpg  used on input line 214.
+(pdftex.def)             Requested size: 409.76732pt x 260.57356pt.
+ [11 <./img/img35.jpg> <./img/img34.jpg>]
 Chapter 5.
-<img/img10.jpg, id=207, 394.97563pt x 82.80937pt>
+<img/img10.jpg, id=215, 394.97563pt x 82.80937pt>
 File: img/img10.jpg Graphic file (type jpg)
 <use img/img10.jpg>
-Package pdftex.def Info: img/img10.jpg  used on input line 222.
+Package pdftex.def Info: img/img10.jpg  used on input line 230.
 (pdftex.def)             Requested size: 409.76732pt x 85.91121pt.
-<img/img11.jpg, id=208, 443.8035pt x 214.182pt>
+<img/img11.jpg, id=216, 443.8035pt x 214.182pt>
 File: img/img11.jpg Graphic file (type jpg)
 <use img/img11.jpg>
-Package pdftex.def Info: img/img11.jpg  used on input line 232.
+Package pdftex.def Info: img/img11.jpg  used on input line 240.
 (pdftex.def)             Requested size: 409.76732pt x 197.76228pt.
 
-Overfull \hbox (11.69669pt too wide) in paragraph at lines 229--233
+Overfull \hbox (11.69669pt too wide) in paragraph at lines 237--241
 []\OT1/cmr/m/n/12 L'algoritmo ter-mina quando la lista "open[]list" ^^Re vuota 
 e resti-tu-isce la lista "best[]recipes"
  []
 
-[11
+[12
 
- <./img/img10.jpg>] [12 <./img/img11.jpg>]
-Chapter 6.
-[13
-
-]
-<img/img12.jpg, id=225, 483.8075pt x 119.94812pt>
-File: img/img12.jpg Graphic file (type jpg)
-<use img/img12.jpg>
-Package pdftex.def Info: img/img12.jpg  used on input line 297.
-(pdftex.def)             Requested size: 409.76732pt x 101.59581pt.
- [14 <./img/img12.jpg>]
-<img/img13.jpg, id=232, 426.09187pt x 177.66376pt>
-File: img/img13.jpg Graphic file (type jpg)
-<use img/img13.jpg>
-Package pdftex.def Info: img/img13.jpg  used on input line 324.
-(pdftex.def)             Requested size: 409.76732pt x 170.86702pt.
- [15 <./img/img13.jpg>]
-<img/img14.jpg, id=240, 483.8075pt x 84.81688pt>
-File: img/img14.jpg Graphic file (type jpg)
-<use img/img14.jpg>
-Package pdftex.def Info: img/img14.jpg  used on input line 343.
-(pdftex.def)             Requested size: 409.76732pt x 71.8397pt.
- [16 <./img/img14.jpg>]
-<img/img15.jpg, id=247, 317.68687pt x 152.57pt>
-File: img/img15.jpg Graphic file (type jpg)
-<use img/img15.jpg>
-Package pdftex.def Info: img/img15.jpg  used on input line 366.
-(pdftex.def)             Requested size: 409.76732pt x 196.80913pt.
-<img/img16.jpg, id=248, 483.8075pt x 315.1775pt>
-File: img/img16.jpg Graphic file (type jpg)
-<use img/img16.jpg>
-Package pdftex.def Info: img/img16.jpg  used on input line 377.
-(pdftex.def)             Requested size: 409.76732pt x 266.95471pt.
-
-[17 <./img/img15.jpg> <./img/img16.jpg>]
-<img/img21.jpg, id=256, 295.1025pt x 171.13937pt>
-File: img/img21.jpg Graphic file (type jpg)
-<use img/img21.jpg>
-Package pdftex.def Info: img/img21.jpg  used on input line 395.
-(pdftex.def)             Requested size: 409.76732pt x 237.64276pt.
-<img/img17.jpg, id=257, 393.97188pt x 193.72375pt>
-File: img/img17.jpg Graphic file (type jpg)
-<use img/img17.jpg>
-Package pdftex.def Info: img/img17.jpg  used on input line 400.
-(pdftex.def)             Requested size: 409.76732pt x 201.49158pt.
- [18 <./img/img21.jpg>]
-<img/img18.jpg, id=264, 393.97188pt x 120.45pt>
-File: img/img18.jpg Graphic file (type jpg)
-<use img/img18.jpg>
-Package pdftex.def Info: img/img18.jpg  used on input line 407.
-(pdftex.def)             Requested size: 409.76732pt x 125.27972pt.
-<img/img19.jpg, id=265, 464.23438pt x 146.04562pt>
-File: img/img19.jpg Graphic file (type jpg)
-<use img/img19.jpg>
-Package pdftex.def Info: img/img19.jpg  used on input line 416.
-(pdftex.def)             Requested size: 409.76732pt x 128.91273pt.
- [19 <./img/img17.jpg> <./img/img18.jpg> <./img/img19.jpg>]
-Chapter 7.
-<img/img22.jpg, id=273, 287.766pt x 208.926pt>
-File: img/img22.jpg Graphic file (type jpg)
-<use img/img22.jpg>
-Package pdftex.def Info: img/img22.jpg  used on input line 442.
-(pdftex.def)             Requested size: 318.7087pt x 231.40051pt.
-[20
-
-]
-<img/img23.jpg, id=278, 263.457pt x 239.148pt>
-File: img/img23.jpg Graphic file (type jpg)
-<use img/img23.jpg>
-Package pdftex.def Info: img/img23.jpg  used on input line 449.
-(pdftex.def)             Requested size: 318.7087pt x 289.31886pt.
-<img/img24.jpg, id=279, 306.14375pt x 147.55125pt>
-File: img/img24.jpg Graphic file (type jpg)
-<use img/img24.jpg>
-Package pdftex.def Info: img/img24.jpg  used on input line 455.
-(pdftex.def)             Requested size: 318.7087pt x 153.61401pt.
- [21 <./img/img22.jpg> <./img/img23.jpg>]
-<img/img28.jpg, id=287, 411.03563pt x 14.0525pt>
-File: img/img28.jpg Graphic file (type jpg)
-<use img/img28.jpg>
-Package pdftex.def Info: img/img28.jpg  used on input line 462.
-(pdftex.def)             Requested size: 318.7087pt x 10.89592pt.
-<img/img25.jpg, id=288, 282.55562pt x 240.39813pt>
-File: img/img25.jpg Graphic file (type jpg)
-<use img/img25.jpg>
-Package pdftex.def Info: img/img25.jpg  used on input line 471.
-(pdftex.def)             Requested size: 318.7087pt x 271.17719pt.
-<img/img26.jpg, id=289, 359.3425pt x 327.2225pt>
-File: img/img26.jpg Graphic file (type jpg)
-<use img/img26.jpg>
-Package pdftex.def Info: img/img26.jpg  used on input line 480.
-(pdftex.def)             Requested size: 318.7087pt x 290.24348pt.
- [22 <./img/img24.jpg> <./img/img28.jpg> <./img/img25.jpg>]
-<img/img27.jpg, id=297, 319.1925pt x 147.55125pt>
-File: img/img27.jpg Graphic file (type jpg)
-<use img/img27.jpg>
-Package pdftex.def Info: img/img27.jpg  used on input line 487.
-(pdftex.def)             Requested size: 318.7087pt x 147.32797pt.
-<img/img29.jpg, id=298, 400.99812pt x 13.55063pt>
-File: img/img29.jpg Graphic file (type jpg)
-<use img/img29.jpg>
-Package pdftex.def Info: img/img29.jpg  used on input line 494.
-(pdftex.def)             Requested size: 318.7087pt x 10.77061pt.
- [23 <./img/img26.jpg> <./img/img27.jpg> <./img/img29.jpg>]
-Chapter 8.
-<img/img32.jpg, id=307, 964.10187pt x 565.11125pt>
-File: img/img32.jpg Graphic file (type jpg)
-<use img/img32.jpg>
-Package pdftex.def Info: img/img32.jpg  used on input line 514.
-(pdftex.def)             Requested size: 409.76732pt x 240.18204pt.
-[24
-
-]
-<img/img31.jpg, id=313, 483.8075pt x 283.0575pt>
-File: img/img31.jpg Graphic file (type jpg)
-<use img/img31.jpg>
-Package pdftex.def Info: img/img31.jpg  used on input line 519.
-(pdftex.def)             Requested size: 409.76732pt x 239.74913pt.
-<img/img33.jpg, id=314, 867.24pt x 209.78375pt>
+ <./img/img10.jpg>]
+<img/img33.jpg, id=223, 867.24pt x 209.78375pt>
 File: img/img33.jpg Graphic file (type jpg)
 <use img/img33.jpg>
-Package pdftex.def Info: img/img33.jpg  used on input line 525.
+Package pdftex.def Info: img/img33.jpg  used on input line 247.
 (pdftex.def)             Requested size: 409.76732pt x 99.12334pt.
-<img/img35.jpg, id=315, 378.41376pt x 38.1425pt>
-File: img/img35.jpg Graphic file (type jpg)
-<use img/img35.jpg>
-Package pdftex.def Info: img/img35.jpg  used on input line 530.
-(pdftex.def)             Requested size: 409.76732pt x 41.30327pt.
- [25 <./img/img32.jpg> <./img/img31.jpg> <./img/img33.jpg>]
-<img/img34.jpg, id=325, 467.24562pt x 297.11pt>
-File: img/img34.jpg Graphic file (type jpg)
-<use img/img34.jpg>
-Package pdftex.def Info: img/img34.jpg  used on input line 535.
-(pdftex.def)             Requested size: 409.76732pt x 260.57356pt.
-<img/img20.jpg, id=326, 258.9675pt x 118.4425pt>
+ [13 <./img/img11.jpg> <./img/img33.jpg>]
+Chapter 6.
+[14
+
+]
+<img/img12.jpg, id=236, 483.8075pt x 119.94812pt>
+File: img/img12.jpg Graphic file (type jpg)
+<use img/img12.jpg>
+Package pdftex.def Info: img/img12.jpg  used on input line 310.
+(pdftex.def)             Requested size: 409.76732pt x 101.59581pt.
+ [15 <./img/img12.jpg>]
+<img/img13.jpg, id=243, 426.09187pt x 177.66376pt>
+File: img/img13.jpg Graphic file (type jpg)
+<use img/img13.jpg>
+Package pdftex.def Info: img/img13.jpg  used on input line 337.
+(pdftex.def)             Requested size: 409.76732pt x 170.86702pt.
+ [16 <./img/img13.jpg>]
+<img/img14.jpg, id=251, 483.8075pt x 84.81688pt>
+File: img/img14.jpg Graphic file (type jpg)
+<use img/img14.jpg>
+Package pdftex.def Info: img/img14.jpg  used on input line 356.
+(pdftex.def)             Requested size: 409.76732pt x 71.8397pt.
+ [17 <./img/img14.jpg>]
+<img/img15.jpg, id=258, 317.68687pt x 152.57pt>
+File: img/img15.jpg Graphic file (type jpg)
+<use img/img15.jpg>
+Package pdftex.def Info: img/img15.jpg  used on input line 379.
+(pdftex.def)             Requested size: 409.76732pt x 196.80913pt.
+<img/img16.jpg, id=259, 483.8075pt x 315.1775pt>
+File: img/img16.jpg Graphic file (type jpg)
+<use img/img16.jpg>
+Package pdftex.def Info: img/img16.jpg  used on input line 390.
+(pdftex.def)             Requested size: 409.76732pt x 266.95471pt.
+
+[18 <./img/img15.jpg> <./img/img16.jpg>]
+<img/img21.jpg, id=268, 295.1025pt x 171.13937pt>
+File: img/img21.jpg Graphic file (type jpg)
+<use img/img21.jpg>
+Package pdftex.def Info: img/img21.jpg  used on input line 408.
+(pdftex.def)             Requested size: 409.76732pt x 237.64276pt.
+<img/img17.jpg, id=269, 393.97188pt x 193.72375pt>
+File: img/img17.jpg Graphic file (type jpg)
+<use img/img17.jpg>
+Package pdftex.def Info: img/img17.jpg  used on input line 413.
+(pdftex.def)             Requested size: 409.76732pt x 201.49158pt.
+ [19 <./img/img21.jpg>]
+<img/img18.jpg, id=275, 393.97188pt x 120.45pt>
+File: img/img18.jpg Graphic file (type jpg)
+<use img/img18.jpg>
+Package pdftex.def Info: img/img18.jpg  used on input line 420.
+(pdftex.def)             Requested size: 409.76732pt x 125.27972pt.
+<img/img19.jpg, id=276, 464.23438pt x 146.04562pt>
+File: img/img19.jpg Graphic file (type jpg)
+<use img/img19.jpg>
+Package pdftex.def Info: img/img19.jpg  used on input line 429.
+(pdftex.def)             Requested size: 409.76732pt x 128.91273pt.
+ [20 <./img/img17.jpg> <./img/img18.jpg> <./img/img19.jpg>]
+Chapter 7.
+<img/img22.jpg, id=284, 287.766pt x 208.926pt>
+File: img/img22.jpg Graphic file (type jpg)
+<use img/img22.jpg>
+Package pdftex.def Info: img/img22.jpg  used on input line 455.
+(pdftex.def)             Requested size: 318.7087pt x 231.40051pt.
+[21
+
+]
+<img/img23.jpg, id=289, 263.457pt x 239.148pt>
+File: img/img23.jpg Graphic file (type jpg)
+<use img/img23.jpg>
+Package pdftex.def Info: img/img23.jpg  used on input line 462.
+(pdftex.def)             Requested size: 318.7087pt x 289.31886pt.
+<img/img24.jpg, id=290, 306.14375pt x 147.55125pt>
+File: img/img24.jpg Graphic file (type jpg)
+<use img/img24.jpg>
+Package pdftex.def Info: img/img24.jpg  used on input line 468.
+(pdftex.def)             Requested size: 318.7087pt x 153.61401pt.
+ [22 <./img/img22.jpg> <./img/img23.jpg>]
+<img/img28.jpg, id=298, 411.03563pt x 14.0525pt>
+File: img/img28.jpg Graphic file (type jpg)
+<use img/img28.jpg>
+Package pdftex.def Info: img/img28.jpg  used on input line 475.
+(pdftex.def)             Requested size: 318.7087pt x 10.89592pt.
+<img/img25.jpg, id=299, 282.55562pt x 240.39813pt>
+File: img/img25.jpg Graphic file (type jpg)
+<use img/img25.jpg>
+Package pdftex.def Info: img/img25.jpg  used on input line 484.
+(pdftex.def)             Requested size: 318.7087pt x 271.17719pt.
+<img/img26.jpg, id=300, 359.3425pt x 327.2225pt>
+File: img/img26.jpg Graphic file (type jpg)
+<use img/img26.jpg>
+Package pdftex.def Info: img/img26.jpg  used on input line 493.
+(pdftex.def)             Requested size: 318.7087pt x 290.24348pt.
+ [23 <./img/img24.jpg> <./img/img28.jpg> <./img/img25.jpg>]
+<img/img27.jpg, id=309, 319.1925pt x 147.55125pt>
+File: img/img27.jpg Graphic file (type jpg)
+<use img/img27.jpg>
+Package pdftex.def Info: img/img27.jpg  used on input line 500.
+(pdftex.def)             Requested size: 318.7087pt x 147.32797pt.
+<img/img29.jpg, id=310, 400.99812pt x 13.55063pt>
+File: img/img29.jpg Graphic file (type jpg)
+<use img/img29.jpg>
+Package pdftex.def Info: img/img29.jpg  used on input line 507.
+(pdftex.def)             Requested size: 318.7087pt x 10.77061pt.
+ [24 <./img/img26.jpg> <./img/img27.jpg> <./img/img29.jpg>]
+Chapter 8.
+<img/img32.jpg, id=319, 964.10187pt x 565.11125pt>
+File: img/img32.jpg Graphic file (type jpg)
+<use img/img32.jpg>
+Package pdftex.def Info: img/img32.jpg  used on input line 527.
+(pdftex.def)             Requested size: 409.76732pt x 240.18204pt.
+[25
+
+]
+<img/img31.jpg, id=324, 483.8075pt x 283.0575pt>
+File: img/img31.jpg Graphic file (type jpg)
+<use img/img31.jpg>
+Package pdftex.def Info: img/img31.jpg  used on input line 532.
+(pdftex.def)             Requested size: 409.76732pt x 239.74913pt.
+<img/img20.jpg, id=325, 258.9675pt x 118.4425pt>
 File: img/img20.jpg Graphic file (type jpg)
 <use img/img20.jpg>
-Package pdftex.def Info: img/img20.jpg  used on input line 541.
+Package pdftex.def Info: img/img20.jpg  used on input line 538.
 (pdftex.def)             Requested size: 409.76732pt x 187.43347pt.
-
-Overfull \hbox (21.42297pt too wide) in paragraph at lines 544--545
+ [26 <./img/img32.jpg> <./img/img31.jpg>]
+Overfull \hbox (21.42297pt too wide) in paragraph at lines 541--542
 \OT1/cmr/m/n/12 Questo codice ^^Re una fun-zione chia-mata "get[]audio[]input" 
 che uti-lizza la li-bre-ria "SpeechRecog-
  []
 
-[26 <./img/img35.jpg> <./img/img34.jpg> <./img/img20.jpg>] [27]
+[27 <./img/img20.jpg>]
 Chapter 9.
 [28
 
@@ -1045,21 +1015,21 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 32116C16B822E5A123B05CC6E38F58E5;3337.
  ) 
 Here is how much of TeX's memory you used:
- 23487 strings out of 476091
- 435603 string characters out of 5795540
+ 22480 strings out of 476091
+ 417266 string characters out of 5795540
  1860324 words of memory out of 5000000
- 43361 multiletter control sequences out of 15000+600000
+ 42378 multiletter control sequences out of 15000+600000
  518788 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 117i,10n,131p,846b,516s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,10n,131p,846b,505s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/tex
 live/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2022
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dis
 t/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (29 pages, 2116046 bytes).
+Output written on main.pdf (29 pages, 2116135 bytes).
 PDF statistics:
- 387 PDF objects out of 1000 (max. 8388607)
- 300 compressed objects within 3 object streams
- 89 named destinations out of 1000 (max. 500000)
+ 385 PDF objects out of 1000 (max. 8388607)
+ 298 compressed objects within 3 object streams
+ 87 named destinations out of 1000 (max. 500000)
  388 words of extra memory for PDF output out of 10000 (max. 10000000)
 
