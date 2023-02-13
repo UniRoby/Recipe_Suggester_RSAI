@@ -349,11 +349,9 @@ Word2vec è una semplice rete neurale artificiale a due strati progettata per el
 Per addestrare il modello, lo strato di input includerà il numero di neuroni pari alle parole del vocabolario. La dimensione dello strato di uscita e dello strato di ingresso rimane la stessa. Tuttavia, la dimensione dello strato nascosto è impostata in base ai vettori delle dimensioni delle parole risultanti. È possibile eseguire l’incorporazione di parole con Word2Vec attraverso due metodi. In entrambi i metodi sono necessarie reti neurali artificiali. Questi metodi sono: 
 
 \begin{itemize}
-\item \textbf{CBOW : } usa un vettore di parole per predire un contesto target
-\item \textbf{Skim Gram : }  è denominato metodo “Continuous Bag of Words” (CBOW), per predire una parola target basata su una sequenza contigua di n-grammi.
+\item \textbf{CBOW : } è denominato metodo “Continuous Bag of Words” (CBOW), per predire una parola target basata su una sequenza contigua di n-grammi.
+\item \textbf{Skim Gram : } usa un vettore di parole per predire un contesto target
 \end{itemize}
-
-: quello esposto — dove un vettore di parole è usato per predire un contesto target — che è detto metodo skip-gram; il secondo invece è denominato metodo “Continuous Bag of Words” (CBOW), il quale utilizza il contesto per predire una parola target basata su una sequenza contigua di n-grammi.
 
 Nel nostro caso abbiamo usato CBOW
 

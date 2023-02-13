@@ -16,10 +16,10 @@
 \contentsline {section}{\numberline {6.3}Word2vec}{16}{section.6.3}%
 \contentsline {section}{\numberline {6.4}Similarità del coseno}{18}{section.6.4}%
 \contentsline {section}{\numberline {6.5}KNN}{19}{section.6.5}%
-\contentsline {chapter}{\numberline {7}Quarza Soluzione : Clustering}{22}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Strategia 1}{22}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Strategia 2}{24}{section.7.2}%
-\contentsline {chapter}{\numberline {8}App}{26}{chapter.8}%
-\contentsline {section}{\numberline {8.1}GUI}{26}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Input Vocale}{28}{section.8.2}%
-\contentsline {chapter}{\numberline {9}Riferimenti}{29}{chapter.9}%
+\contentsline {chapter}{\numberline {7}Quarza Soluzione : Clustering}{21}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Strategia 1}{21}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Strategia 2}{23}{section.7.2}%
+\contentsline {chapter}{\numberline {8}App}{25}{chapter.8}%
+\contentsline {section}{\numberline {8.1}GUI}{25}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Input Vocale}{27}{section.8.2}%
+\contentsline {chapter}{\numberline {9}Riferimenti}{28}{chapter.9}%
