@@ -16,29 +16,17 @@
    \begin{center}
        \vspace*{5cm}
 
-       \textbf{\huge{No wAIste}}
+       \textbf{\huge{No Waste}}
 
        \vspace{0.5cm}
         \href{https://github.com/UniRoby/Recipe_Suggester_RSAI}{GitHub}
             
        \vspace{1.5cm}
 
-       \textbf{Roberto Piscopo, Alessandro Satta}
-     
-	 \vspace{0.5cm}
-
-	Matricole : 
-
-	0512109906 
-
-	0512110929
-	
-	
+       \textbf{Roberto Piscopo, 0512109906  \\ Alessandro Satta, 0512110929}
 
        \vfill
 
-    
-     
        \includegraphics[width=0.4\textwidth]{img/logo.png}
             
        Dipartimento di Informatica\\
@@ -103,8 +91,7 @@ Poi tutte le ricette sono state salvate in un file csv
 
 
 \section{Data Understanding, Data Preparation \& Data Cleaning}
-Abbiamo creato un programma per l’esplorazione del dataset in modo tale da effettuare il conteggio delle ricette, del tempo medio per la preparazione , del numero di ricette per tipologia, del numero di ingredienti totali, del numero di ingredienti più usati, di quelli meno usati, del conteggio per ogni singolo ingrediente. Ed è proprio quest’ultimo dato che ci ha permesso di pulire ulteriormente il dataset da ricette superflue. Difatti abbiamo eliminato circa un centinaio di ricette che avevano ingredienti unici, troppo specifici che non ci avrebbero aiutato nell’identificazione di ricette simili, in quanto uniche nel loro genere. (Per il codice vedere removeRow.py in RecipeScraper)
-
+Abbiamo creato un programma per l’esplorazione del dataset in modo tale da effettuare il conteggio delle ricette, del tempo medio per la preparazione , del numero di ricette per tipologia, del numero di ingredienti totali, del numero di ingredienti più usati, di quelli meno usati, del conteggio per ogni singolo ingrediente. 
 Un primo problema si è presentato con la lista degli ingredienti. Se prediamo ad esempio la ricetta “Tiramisù” i suoi ingredienti sono: 
 
 \textbf{Mascarpone} 750 g
@@ -130,6 +117,8 @@ Tutti gli ingredienti sono stati portati in lower Case.
 Fatto ciò la lista di ingredienti pulita è stata salvata come stringa ed inserita al posto della lista di ingredienti precedente alla pulizia. Alla fine del processo veniva creato un novo dataset.
 
 La fase di pulizia del dataset però non finiva qui.
+
+Grazie al conteggio per ogni singolo ingrediente dell'espolorazione dataset aggiornato, ci ha permesso di pulire ulteriormente il dataset da ricette superflue. Difatti abbiamo eliminato circa un centinaio di ricette che avevano ingredienti unici, troppo specifici che non ci avrebbero aiutato nell’identificazione di ricette simili, in quanto uniche nel loro genere. (Per il codice vedere removeRow.py in RecipeScraper)
 
 \begin{figure}[H]
         \centering
