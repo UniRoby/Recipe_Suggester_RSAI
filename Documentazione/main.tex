@@ -464,7 +464,7 @@ Nella prima stategia abbiamo calcolato la cosine\_similarity di tra tutte le ric
 
 Nel seconda strategia abbiamo creato il clustering una volta calcolato la cosine\_similarity tra la ricetta scelta e tutte le altre ricette del dataset.
 
-Per la scelta del K abbiamo usato in entrambe le strategie il metodo dell’elbow point e Il Silhouette Coefficient.
+Per la scelta del K abbiamo usato in entrambe le strategie il metodo dell’elbow point per la scelta del k, e Il Silhouette Coefficient per la bontà dei claster.
 
 L'elbow point è una metrica nell'analisi del cluster per determinare il numero ottimale di cluster da utilizzare in un modello di clustering. Il punto gomito rappresenta il numero di cluster in cui l'incremento della somma delle distanze quadratiche medie (SSE, Sum of Squared Errors) tra i punti del cluster e il centroide del cluster stesso, inizia a rallentare. 
 
@@ -537,15 +537,15 @@ Con la prima posiamo effettuare il clustering una sola volta, salvare nel datase
 Con la seconda però abbiamo raccomandazioni più precise , vedi il silhouette Coefficient
 
 \chapter{App}
-Per creare l’interfaccia grafica dell’applicazione abbiamo usato la libreria customtkinter di python che permette di crare una gui semplice e minimale. Inoltre è possibile non solo inserire una serie di ingredienti che abbiamo , ma anche selezionare a video delle ricette che ci piacciono per farci consigliare altre ricette simili. 
+Per creare l’interfaccia grafica dell’applicazione abbiamo usato la libreria customtkinter di python che permette di creare una gui semplice e minimale. Inoltre è possibile non solo inserire una serie di ingredienti che abbiamo , ma anche selezionare a video delle ricette che ci piacciono per farci consigliare altre ricette simili. 
 \section{GUI}
- Nella pagina iniziale vengono mostrate una serie di ricette che l'utente può selezionare, e per ognuna    delle quali il programma restituisce 4 ricette consigliate.
+ Nella pagina iniziale vengono mostrate una serie di ricette che l'utente può selezionare, e per ognuna delle quali il programma restituisce 4 ricette consigliate.
  L'utente può anche scrivere gli ingredienti che ha disposizione nel campo di testo o dirli a voce  selezionando il bottone "mic".
 
 Inoltre può selezionare con quale strategia effettuare la ricerca (Word2Vec, Clustering 1, Clustering 2)
  
  Una volta che ha selezionato una ricetta e/o inserito degli ingredienti può procedere con il premere "Avvia Ricerca".
- Se non vede nessuna ricetta che gli piace può farsene generare di nuove conil bottone "Nuove ricette" Oppure dopo che ha ottenuto dei cosigli su una ricetta può tornare alla stessa lista di ricette con il bottone "Lista ricette" per selezionarne una che aveva dimenticato.
+ Se non vede nessuna ricetta che gli piace può generarne di nuove con il bottone "Nuove ricette", oppure dopo che ha ottenuto dei cosigli su una ricetta può tornare alla stessa lista di ricette con il bottone "Lista ricette" per selezionarne una che aveva dimenticato.
  
 
 \begin{figure}[H]
@@ -564,7 +564,7 @@ Inoltre può selezionare con quale strategia effettuare la ricerca (Word2Vec, Cl
         {\includegraphics[width=0.9\textwidth]{img/img20.jpg}}
 \end{figure}
 
-Questo codice è una funzione chiamata "get\_audio\_input" che utilizza la libreria "SpeechRecognition" (sr) per riconoscere la voce dell'utente e tradurla in testo. La funzione utilizza un microfono come fonte di input audio e chiede all'utente di elencare gli ingredienti che ha a disposizione. Quando l'utente inizia a parlare, il codice registra l'audio e lo passa al metodo "recognize\_google" dell'oggetto "Recognizer" per ottenere la traduzione in testo. Il risultato viene salvato come stringa in "ingredients". Successivamente, la stringa viene divisa in una lista di parole utilizzando il metodo "split" e la lista viene successivamente trasformata in una stringa separata da virgole utilizzando il metodo "join". Infine, il testo viene inserito nella casella di testo visualizzata sull'interfaccia utente.
+Questo codice è una funzione chiamata "get\_audio\_input" che utilizza la libreria "SpeechRecognition" (sr) per riconoscere la voce dell'utente e tradurla in testo. La funzione utilizza un microfono come fonte di input audio. Quando l'utente inizia a parlare, il codice registra l'audio e lo passa al metodo "recognize\_google" dell'oggetto "Recognizer" per ottenere la traduzione in testo. Il risultato viene salvato come stringa in "ingredients". Successivamente, la stringa viene divisa in una lista di parole utilizzando il metodo "split" e la lista viene successivamente trasformata in una stringa separata da virgole utilizzando il metodo "join". Infine, il testo viene inserito nella casella di testo visualizzata sull'interfaccia utente.
 
 \chapter{Riferimenti}
 
