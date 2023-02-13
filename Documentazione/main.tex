@@ -24,6 +24,16 @@
        \vspace{1.5cm}
 
        \textbf{Roberto Piscopo, Alessandro Satta}
+     
+	 \vspace{0.5cm}
+
+	Matricole : 
+
+	0512109906 
+
+	0512110929
+	
+	
 
        \vfill
 
@@ -50,29 +60,30 @@ Il nostro progetto ha lo scopo di creare un agente intelligente capace di consig
 \section{Specifiche}
 La prima cosa da fare quando si progetta un agente intelligente è la definizione delle Specifiche Peas
 
-Performance: Migliore ricetta in base agli ingredienti forniti
+\textbf{Performance:} Migliore ricetta in base agli ingredienti forniti
 
-Enviroment: L’ambiente nel quale il nostro agente opera è composto da tutte le ricette del dataset con i relativi: titolo, ingredienti, ratings, tempo di preparazione, istruzioni, tipologia
+\textbf{Enviroment:} L’ambiente nel quale il nostro agente opera è composto da tutte le ricette del dataset con i relativi: titolo, ingredienti, ratings, tempo di preparazione, istruzioni, tipologia.
+
 L’ambiente risulta:
 \begin{itemize}
-\item Completamente osservabile: si ha accesso a tutte le informazioni di ogni ricetta
-\item Deterministico: L'ambiente deterministico significa che l'agente sa esattamente cosa aspettarsi in base alle informazioni fornite e agli input dell'utente. In altre parole, l'agente sa che dati gli stessi input, otterrà sempre lo stesso output, l'agente sa che se gli vengono forniti gli stessi ingredienti, troverà sempre la stessa ricetta migliore nell'ambiente statico
-\item Episodico: l'agente si trova in un singolo episodio in cui riceve gli ingredienti in input e restituisce la migliore ricetta come output, senza alcuna interazione ulteriore con il mondo esterno.
-\item Statico: L’insieme delle ricette e le relative informazioni non cambiano nel corso del tempo
-\item Discreto: L’agente ha a disposizione un numero limitato di azioni
+\item \textbf{Completamente osservabile:} si ha accesso a tutte le informazioni di ogni ricetta
+\item \textbf{Deterministico:} L'ambiente deterministico significa che l'agente sa esattamente cosa aspettarsi in base alle informazioni fornite e agli input dell'utente. In altre parole, l'agente sa che dati gli stessi input, otterrà sempre lo stesso output, l'agente sa che se gli vengono forniti gli stessi ingredienti, troverà sempre la stessa ricetta migliore nell'ambiente statico
+\item \textbf{Episodico:} l'agente si trova in un singolo episodio in cui riceve gli ingredienti in input e restituisce la migliore ricetta come output, senza alcuna interazione ulteriore con il mondo esterno.
+\item \textbf{Statico:} L’insieme delle ricette e le relative informazioni non cambiano nel corso del tempo
+\item \textbf{Discreto:} L’agente ha a disposizione un numero limitato di azioni
+\item \textbf{Singolo Agente:} è presente solo un agente che opera nell’ambiente
  \end{itemize}
 
-Attuatori: L'algoritmo utilizzato per generare le possibili soluzioni e selezionare la migliore. 
+\textbf{Attuatori:} L'algoritmo utilizzato per generare le possibili soluzioni e selezionare la migliore. 
 
-Sensori: Gli input dell'utente, ovvero la lista degli ingredienti.
+\textbf{Sensori:} Gli input dell'utente, ovvero la lista degli ingredienti.
 
-Singolo Agente: è presente solo un agente che opera nell’ambiente
+
 
 \chapter{Dataset}
 \section{Creazione Dataset}
-Non esistendo dei dataset di ricette in italiano, abbiamo dovuto crearlo noi. Per farlo abbiamo utilizzato la tecnica del Web Scraping, ovvero una tecnica tramite la quale estrarre dati da un sito web, nel nostro caso da \href{https://www.giallozafferano.it/}{giallo zafferano}. 
-Abbiamo utilizzato una libreria di python chiamata recipe-scrapers insieme alla llibreria BeautifulSoup
-Installabile con il comando pip install recipe-scrapers.   
+Non esistendo dei dataset di ricette in italiano, abbiamo dovuto crearlo noi. Per farlo abbiamo utilizzato la tecnica del Web Scraping, ovvero una tecnica tramite la quale estrarre dati da un sito web, nel nostro caso da \href{https://www.giallozafferano.it/}{GialloZafferano}. 
+Abbiamo utilizzato una libreria di python chiamata recipe-scrapers insieme alla libreria BeautifulSoup  
 BeautifulSoup è stato utilizzata per prendere tutti i link delle ricette delle 426 pagine di GialloZafferano.
     \begin{figure}[H]
         \centering
@@ -90,7 +101,10 @@ Poi tutte le ricette sono state salvate in un file csv
     \end{figure}
 
 
-\section{Data Preparation \& Data Cleaning}
+
+\section{Data Understanding, Data Preparation \& Data Cleaning}
+Abbiamo creato un programma per l’esplorazione del dataset in modo tale da effettuare il conteggio delle ricette, del tempo medio per la preparazione , del numero di ricette per tipologia, del numero di ingredienti totali, del numero di ingredienti più usati, di quelli meno usati, del conteggio per ogni singolo ingrediente. Ed è proprio quest’ultimo dato che ci ha permesso di pulire ulteriormente il dataset da ricette superflue. Difatti abbiamo eliminato circa un centinaio di ricette che avevano ingredienti unici, troppo specifici che non ci avrebbero aiutato nell’identificazione di ricette simili, in quanto uniche nel loro genere. (Per il codice vedere removeRow.py in RecipeScraper)
+
 Un primo problema si è presentato con la lista degli ingredienti. Se prediamo ad esempio la ricetta “Tiramisù” i suoi ingredienti sono: 
 
 \textbf{Mascarpone} 750 g
@@ -105,17 +119,17 @@ Un primo problema si è presentato con la lista degli ingredienti. Se prediamo a
 
 A noi interessano solo i nomi degli ingredienti, in quanto saranno utilizzati per trovare ricette simili dati degli ingredienti in input. Quindi andavano cancellate tutte le grammature e altre informazioni non necessarie come “freschissime, circa 5 medie”.
 
-Per fare questo è stato creato un programma in python che andava a rimuovere le grammature, i numeri, informazioni nelle parentesi ed informazioni di contorno in generale. Inoltre bisognava anche andare a sostituire alcuni ingredienti composti usando solo l’ingrediente principale ad esempio: Estratto di vaniglia -\> Vaniglia. 
+Per fare questo è stato creato un programma in python che andava a rimuovere le grammature, i numeri, informazioni nelle parentesi ed informazioni di contorno in generale. Inoltre bisognava anche andare a sostituire alcuni ingredienti composti usando solo l’ingrediente principale ad esempio: Estratto di vaniglia, doveva diventarevaniglia. 
 
-Poi venivano rimossi tutti i caratteri non necessari come: [,](,) /, ecc
+Poi sono stati rimossi tutti i caratteri non necessari come: [,](,) /, ecc
 
-Andavano rimosse tutti quei dettagli come “piccola”. E se ci sta piccolo o piccoli ? Abbiamo rimosso tutte le varianti manualmente, (solo dopo siamo venuti a conoscenza di funzioni automatiche di lemmatizzazione e stemming).
+Sono stati rimossi tutti quei dettagli come “piccola”. E se ci sta piccolo o piccoli ? Abbiamo rimosso tutte le varianti manualmente, (solo dopo siamo venuti a conoscenza di funzioni automatiche di lemmatizzazione e stemming).
 
 Tutti gli ingredienti sono stati portati in lower Case.
 
-Fatto ciò la lista di ingredienti pulita veniva salvata come stringa ed inserita al posto della lista di ingredienti precedente alla pulizia. Alla fine del processo veniva creato un novo dataset.
+Fatto ciò la lista di ingredienti pulita è stata salvata come stringa ed inserita al posto della lista di ingredienti precedente alla pulizia. Alla fine del processo veniva creato un novo dataset.
 
-La fase di pulizia del dataset però non finiva qui. Abbiamo creato un programma per l’esplorazione del dataset in modo tale da effettuare il conteggio delle ricette, del tempo medio per la preparazione , del numero di ricette per tipologia, del numero di ingredienti totali, del numero di ingredienti più usati, di quelli meno usati, del conteggio per ogni singolo ingrediente. Ed è proprio quest’ultimo dato che ci ha permesso di pulire ulteriormente il dataset da ricette superflue. Difatti abbiamo eliminato circa un centinaio di ricette che avevano ingredienti unici, troppo specifici che non ci avrebbero aiutato nell’identificazione di ricette simili, in quanto uniche nel loro genere. (Per il codice vedere removeRow.py in RecipeScraper)
+La fase di pulizia del dataset però non finiva qui.
 
 \begin{figure}[H]
         \centering
