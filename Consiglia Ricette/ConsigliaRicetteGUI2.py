@@ -371,7 +371,7 @@ def show_selected():
     
 root= ctk.CTk()
 root.geometry("1280x720 ")
-root.title("No wAIste")
+root.title("No Waste")
 
 sidebar_frame= ctk.CTkFrame(root)
 sidebar_frame.pack(pady=10,padx=10,fill="both", side="left")
@@ -396,7 +396,7 @@ numbers=[]
 printInitialRecipe()
 
 
-logo_label = ctk.CTkLabel(sidebar_frame, text="No wAIste")
+logo_label = ctk.CTkLabel(sidebar_frame, text="No Waste")
 logo_label.grid(row=0, column=0, padx=20, pady=(20, 10))
 
 
