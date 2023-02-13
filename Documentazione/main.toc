@@ -21,5 +21,5 @@
 \contentsline {section}{\numberline {7.2}Strategia 2}{23}{section.7.2}%
 \contentsline {chapter}{\numberline {8}App}{25}{chapter.8}%
 \contentsline {section}{\numberline {8.1}GUI}{25}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Input Vocale}{26}{section.8.2}%
-\contentsline {chapter}{\numberline {9}Riferimenti}{27}{chapter.9}%
+\contentsline {section}{\numberline {8.2}Input Vocale}{27}{section.8.2}%
+\contentsline {chapter}{\numberline {9}Riferimenti}{28}{chapter.9}%
