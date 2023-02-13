@@ -328,6 +328,8 @@ Il modello viene quindi utilizzato per trasformare questi ingredienti in una rap
 Per Misurare la somiglianza tra le liste degli ingredienti e gli ingredienti dati in input abbiamo utilizzato la Similarità del coseno, funzione di Sklearn con le stesse somiglianze e per i dati testuali viene utilizzata per trovare la somiglianza di testi nel documento. 
 Viene usata la funzione ottieni consigli per classificare i punteggi e generare un dataframe, tramite la libreria pandas, contente il titolo, gli ingredienti e il punteggio delle ricette consigliate.
 
+La similarità del coseno è una misura della somiglianza tra due punti dati in un piano. La somiglianza del coseno viene utilizzata per determinare la distanza tra i vicini, ad esempio nei sistemi di raccomandazione viene utilizzata per consigliare film .
+
 I risultati ottenuti sono accettabili ma molte volte consiglia delle ricette per niente simili.
 
 Per migliorarlo avevamo bisogno di tenere traccia degli ingredienti comunemente usati insieme. 
@@ -380,7 +382,7 @@ Calcoliamo la media ponderata di tutti gli incorporamenti di parole di ogni docu
 
 IDF appesantirà i termini molto comuni in un corpus (nel nostro caso parole come olio extravergine d'oliva o sale e soppeserà i termini rari.
 
-Questo sarà vantaggioso per noi perché ci conferirà una maggiore capacità di separare le ricette, poiché gli ingredienti che verranno modificati saranno quelli che l'utente tenderà a non fornire come input al sistema di consiglio.
+In questo modo si ha una capacità di separare le ricette migliore.
 
 Word2Vec cerca di prevedere le parole in base all'ambiente circostante, quindi era fondamentale ordinare gli ingredienti in ordine alfabetico
 
@@ -389,7 +391,7 @@ Word2Vec cerca di prevedere le parole in base all'ambiente circostante, quindi e
         {\includegraphics[width=0.9\textwidth]{img/img15.jpg}}
 \end{figure}
 
-Abbiamo poi utilizzato sia la similarità del coseno sia knn per trovare le ricette simili.
+Abbiamo poi utilizzato sia la similarità del  sia knn per trovare le ricette simili.
 
 \section{Similarità del coseno}
 
@@ -403,7 +405,8 @@ La similarità del coseno :
 \section{KNN}
 
 Abbiamo testato il funziomento anche con  KNN.
-Il K-Nearest Neighbors (KNN) è un algoritmo di classificazione o regressione che prende in considerazione i K oggetti più vicini in un insieme di dati per prevedere la classe o la quantità prevista
+
+Il k-nearest neighbors (traducibile come primi k-vicini), abbreviato in K-NN, è un algoritmo utilizzato nel riconoscimento di pattern per la classificazione di oggetti basandosi sulle caratteristiche degli oggetti vicini a quello considerato.
 
 In questo caso abbiamo usato KNN per trovare le ricette più vicine rispetto a agli ingredienti che l'utente ha fornito. Per fare questo, prima abbiamo convertito i nomi degli ingredienti in vettori utilizzando un modello di embedding. Questi vettori hanno una rappresentazione in uno spazio a più dimensioni che rappresenta la somiglianza semantica degli ingredienti.
 
@@ -411,16 +414,23 @@ Successivamente, abbiamo calcolato la distanza tra il vettore di embedding della
 
 In sintesi, KNN è stato utilizzato per trovare le ricette più simili a quella fornita dall'utente utilizzando la distanza Euclidea tra i vettori di embedding degli ingredienti.
 
+Codice: 
+
+\begin{figure}[H]
+        \centering
+        {\includegraphics[width=0.9\textwidth]{img/img17.jpg}}
+\end{figure}
+
+La riga knn = NearestNeighbors(n\_neighbors=N, algorithm='ball\_tree') crea un oggetto di tipo NearestNeighbors da scikit-learn, che è una classe che implementa un algoritmo di ricerca delle vicinanze più vicine. La classe NearestNeighbors ha due parametri importanti: n\_neighbors: questo parametro specifica il numero di vicini più vicini che vogliamo trovare per ogni punto del dataset. In questo caso, n\_neighbors=N significa che stiamo cercando i N vicini più vicini.
+algorithm: questo parametro specifica l'algoritmo di ricerca delle vicinanze che si desidera utilizzare. Nel caso specifico, l'algoritmo specificato è 'ball\_tree'.
+
+Il modello viene addestrato sulla matrice dei vettori dei documenti con il metodo fit. Infine, il metodo kneighbors viene utilizzato per ottenere le K (in questo caso, N) vicinanze più vicine tra il vettore di input e tutti i vettori dei documenti.
+
 Metriche valutazione KNN:
 
 \begin{figure}[H]
         \centering
         {\includegraphics[width=0.9\textwidth]{img/img21.jpg}}
-\end{figure}
-
-\begin{figure}[H]
-        \centering
-        {\includegraphics[width=0.9\textwidth]{img/img17.jpg}}
 \end{figure}
 
 KNN: input: "farina,uova,grana padano,pangrattato"
@@ -441,12 +451,14 @@ COS\_SIM: input "farina,uova,grana padano,pangrattato"
 
 \chapter{Quarza Soluzione : Clustering}
 
-Abbiamo poi ripreso la soluzione che usava sono TD-IDF e cosine\_similarity e abbiamo usato la cosine\_similarity come input per un algoritmo di clustering. Ed il risultato è stato ottimo
-Per il clustering abbiamo scelto l’algoritmo K-Means uno dei più diffusi.
-Abbiamo provato due strategie: 
+Abbiamo poi ripreso la soluzione che usava sono TD-IDF e cosine\_similarity e abbiamo usato la cosine\_similarity come input per un algoritmo di clustering. Ed il risultato è stato ottimo.
 
-Nel primo abbiamo calcolato la cosine\_similarity di tra tutte le ricette del dataset a priori e passata in input al clustering
-Nel secondo abbiamo creato il clustering una volta calcolato la cosine\_similarity tra la ricetta scelta e tutte le altre ricette del dataset
+Per il clustering abbiamo scelto l’algoritmo K-Means uno dei più diffusi.
+Attuandodue strategie: 
+
+Nella prima stategia abbiamo calcolato la cosine\_similarity di tra tutte le ricette del dataset a priori e l'abbiamo passata in input al clustering.
+
+Nel seconda strategia abbiamo creato il clustering una volta calcolato la cosine\_similarity tra la ricetta scelta e tutte le altre ricette del dataset.
 
 Per la scelta del K abbiamo usato in entrambe le strategie il metodo dell’elbow point e Il Silhouette Coefficient.
 
@@ -456,7 +468,7 @@ Questo punto viene identificato come il punto in cui l'aggiunta di ulteriori clu
 
 Silhouette Coefficient è una metrica che valuta la qualità di un clustering rispetto a come le osservazioni sono state assegnate ai vari cluster. Un valore più alto indica un clustering di qualità superiore, con valori compresi tra -1 e 1.
 
-\section{Strategia 1}   
+\section{Prima Strategia}   
 
 Elbow Point
 
@@ -485,7 +497,7 @@ Silhouette Coefficient
         {\includegraphics[width=0.7\textwidth]{img/img28.jpg}}
 \end{figure}
 
-\section{Strategia 2}   
+\section{Seconda Strategia}   
 
 Elbow Point
 
